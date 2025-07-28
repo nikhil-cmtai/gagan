@@ -1,9 +1,9 @@
-import Login from './login';
-import { Metadata } from 'next';
+import Login from "./login";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Login - Empire Blue',
-  description: 'Login to your account to access your water purification system.',
+  title: "Login - Empire Blue",
+  description: "Access your Empire Blue account to manage your orders and preferences.",
 };
 
 export default function LoginPage() {

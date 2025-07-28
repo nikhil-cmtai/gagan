@@ -44,10 +44,10 @@ const InfoSection = () => {
           
           {/* Water Droplet - Centered in the middle */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="relative w-[120px] h-[120px] md:w-[180px] md:h-[180px]">
+            <div className="relative w-[180px] h-[180px] md:w-[260px] md:h-[260px]">
               <div className="absolute inset-0 bg-blue-400/20 rounded-full animate-pulse"></div>
               <Image
-                src="/icons/water-droplet.svg"
+                src="/water-droplet.png"
                 alt="Water Droplet"
                 fill
                 className="object-contain animate-float"
