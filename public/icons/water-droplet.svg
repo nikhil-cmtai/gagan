@@ -1,0 +1,25 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main droplet shape -->
+  <path d="M100 20C100 20 50 70 50 120C50 155.3 72.4 180 100 180C127.6 180 150 155.3 150 120C150 70 100 20 100 20Z" fill="url(#paint0_linear)" stroke="#3378FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Inner highlight -->
+  <path d="M85 120C85 132.6 91.7 142 100 142C108.3 142 115 132.6 115 120C115 100 100 80 100 80C100 80 85 100 85 120Z" fill="url(#paint1_linear)" fill-opacity="0.8"/>
+  
+  <!-- Shine effect -->
+  <path d="M80 70C80 70 85 75 100 75C115 75 120 70 120 70" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+  
+  <!-- Small droplet inside -->
+  <path d="M100 110C100 110 90 120 90 130C90 137.3 94.5 142 100 142C105.5 142 110 137.3 110 130C110 120 100 110 100 110Z" fill="white" fill-opacity="0.3"/>
+  
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="50" y1="20" x2="150" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5CA2FF"/>
+      <stop offset="1" stop-color="#0054E7"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="85" y1="80" x2="115" y2="142" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="white" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="white" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+</svg> 
