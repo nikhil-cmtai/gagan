@@ -1,8 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Elephant';
+  src: url('/fonts/Elephant-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme inline {
+  /* Font Family */
+  --font-heading: 'Elephant', serif;
+  --font-body: 'Open Sans', sans-serif;
+  
   /* Core Brand Colors */
   --color-primary: #1c6cb2; /* Deep Blue */
   --color-primary-foreground: #fff;
@@ -100,6 +112,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-['Lora'];
   }
 }

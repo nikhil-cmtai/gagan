@@ -11,10 +11,10 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <Link href="/" className="block">
-              <div className="relative w-[150px] h-[50px]">
+              <div className="relative w-[200px] h-[50px]">
                 <Image 
                   src="/logo.png" 
-                  alt="Imperial Water" 
+                  alt="Empire Blue" 
                   fill
                   className="object-contain"
                 />
