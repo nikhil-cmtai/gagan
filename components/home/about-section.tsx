@@ -5,9 +5,9 @@ import Image from 'next/image';
 
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-[#E6F3FF]">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#f3f9ff] rounded-3xl shadow-xl border-2 border-white overflow-hidden">
+        <div className="overflow-hidden">
           <div className="flex flex-col md:flex-row">
             {/* Left Content - About Text */}
             <div className="md:w-3/5 p-8 md:p-12 lg:p-16">
@@ -37,7 +37,7 @@ export default function AboutSection() {
               {/* Modern Building/Office Representation */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-full h-full flex items-center justify-center p-8">
-                  <Image src="/about.jpeg" alt="Empire Blue Headquarters" fill className="object-cover" />
+                  <Image src="/about.jpeg" alt="Empire Blue Headquarters" fill className="object-cover rounded-sm" />
                 </div>
               </div>
               
