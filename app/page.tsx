@@ -11,11 +11,11 @@ export default function Home() {
         {/* Hero Section */}
         <HeroSection />
 
-        {/* Info Section */}
-        <InfoSection />
-
         {/* About Section */}
         <AboutSection />
+
+        {/* Info Section */}
+        <InfoSection />
 
         {/* Health Impact Section */}
         <HealthImpactSection />

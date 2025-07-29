@@ -11,7 +11,7 @@ export default function AboutSection() {
           <div className="flex flex-col md:flex-row">
             {/* Left Content - About Text */}
             <div className="md:w-3/5 p-8 md:p-12 lg:p-16">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-['Elephant'] text-primary mb-8">
+              <h2 className="text-6xl font-['Elephant'] text-primary mb-8">
                 About Us
               </h2>
               
@@ -33,16 +33,19 @@ export default function AboutSection() {
             </div>
             
             {/* Right Content - Building Image */}
-            <div className="md:w-2/5 relative min-h-[300px] md:min-h-0 bg-gradient-to-r from-primary/5 to-primary/20">
+            <div className="md:w-2/5 relative min-h-[600px] shadow-2xl border-8 border-white rounded-4xl">
               {/* Modern Building/Office Representation */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-full h-full flex items-center justify-center p-8">
-                  <Image src="/about.jpeg" alt="Empire Blue Headquarters" fill className="object-cover rounded-sm" />
+                <div className="w-full h-full flex items-center justify-center">
+                  <Image 
+                    src="/about.jpeg" 
+                    alt="Empire Blue Headquarters" 
+                    fill 
+                    className="object-cover rounded-4xl" 
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                  />
                 </div>
               </div>
-              
-              {/* Blue tint overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent"></div>
             </div>
           </div>
         </div>
