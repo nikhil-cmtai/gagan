@@ -5,12 +5,12 @@ import Image from 'next/image';
 
 export default function AboutSection() {
   return (
-    <section className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section>
+      <div className="max-w-7xl mx-auto">
         <div className="overflow-hidden">
-          <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col md:flex-row items-center">
             {/* Left Content - About Text */}
-            <div className="md:w-3/5 p-8 md:p-12 lg:p-16">
+            <div className="md:w-4/5 p-8 md:p-12 lg:p-16">
               <h2 className="text-6xl font-['Elephant'] text-primary mb-8">
                 About Us
               </h2>
@@ -33,18 +33,15 @@ export default function AboutSection() {
             </div>
             
             {/* Right Content - Building Image */}
-            <div className="md:w-2/5 relative min-h-[600px] shadow-2xl border-8 border-white rounded-4xl">
+            <div className="md:w-1/2 w-full h-[600px] md:h-[450px] relative shadow-xl border-8 border-white rounded-4xl flex items-center justify-center">
               {/* Modern Building/Office Representation */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-full h-full flex items-center justify-center">
-                  <Image 
-                    src="/about.jpeg" 
-                    alt="Empire Blue Headquarters" 
-                    fill 
-                    className="object-cover rounded-4xl" 
-                    sizes="(max-width: 768px) 100vw, 40vw"
-                  />
-                </div>
+                <Image 
+                  src="/about.jpeg" 
+                  alt="Empire Blue Headquarters" 
+                  fill 
+                  className="object-cover rounded-3xl" 
+                />
               </div>
             </div>
           </div>

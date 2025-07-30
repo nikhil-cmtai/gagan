@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 const InfoSection = () => {
   return (
-    <section className="py-16 bg-[#E6F3FF] relative z-10 -mt-2">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-21 relative z-10 -mt-2">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#f3f9ff] rounded-3xl shadow-xl p-6 sm:p-10 border-2 border-white relative">
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-20 lg:gap-32 items-start">
             {/* Left Column */}

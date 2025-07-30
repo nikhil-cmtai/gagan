@@ -3,10 +3,11 @@ import InfoSection from '@/components/home/info-section';
 import HealthImpactSection from '@/components/home/health-impact-section';
 import CompanySection from '@/components/home/company-section';
 import AboutSection from '@/components/home/about-section';
+import DetailSection from '@/components/home/detail-section';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#E6F3FF]">
+    <main className="min-h-screen">
       <div>
         {/* Hero Section */}
         <HeroSection />
@@ -16,6 +17,9 @@ export default function Home() {
 
         {/* Info Section */}
         <InfoSection />
+
+        {/* Detail Section */}
+        <DetailSection />
 
         {/* Health Impact Section */}
         <HealthImpactSection />

@@ -5,18 +5,18 @@ import Image from 'next/image';
 
 const HeroSection: React.FC = () => {
   return (
-    <div className=" h-screen flex items-start py-6 sm:py-12 relative overflow-hidden bg-[#E6F3FF]">
+    <div className=" h-screen flex items-start py-6 sm:py-12 relative overflow-hidden ">
 
       <div className="mx-auto w-full relative z-5">
         {/* Main Card with Stats */}
-        <div className="max-w-6xl mx-auto relative pb-[20px]">
+        <div className="max-w-6xl mx-auto relative">
           {/* Main White Card */}
           <div
-            className="bg-[#f3f9ff] rounded-[20px] sm:rounded-[40px] relative overflow-hidden z-5 shadow-[0_0_30px_0_rgba(0,84,231,0.15)] mt-4 sm:mt-8"
+            className="rounded-[20px] sm:rounded-[40px] relative overflow-hidden z-5 shadow-[0_0_30px_0_rgba(0,84,231,0.15)] mt-4 sm:mt-8"
           >
 
             {/* Hero Content */}
-            <div className="flex flex-col lg:flex-row items-center px-6 sm:px-12 lg:px-16 pt-6 sm:pt-12 pb-16 sm:pb-24 text-center lg:text-left bg-[#f3f9ff]">
+            <div className="flex flex-col lg:flex-row items-center px-6 sm:px-12 lg:px-16 pt-6 sm:pt-12 pb-16 sm:pb-24 text-center lg:text-left bg-[#ECF0F3]">
               {/* Left Content - Water Bottle Image - 40% */}
               <div className="flex-1 flex justify-center lg:justify-start items-center relative z-10 mb-8 lg:mb-0 order-1">
                 <div className="relative w-[320px] sm:w-[400px] lg:w-[500px] aspect-[400/380]">
@@ -74,7 +74,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         {/* Full Width Wave Section - Moved higher up */}
-        <div className="absolute -bottom-20 left-0 right-0 w-full z-25 border-t-4 border-white">
+        <div className="absolute -bottom-30 left-0 right-0 w-full z-25">
           <svg
             className="w-full h-[120px]"
             viewBox="0 0 1440 320"
@@ -88,7 +88,7 @@ const HeroSection: React.FC = () => {
             C240,100 480,150 720,150 
             C960,150 1200,100 1440,0 
             L1440,320 L0,320 Z"
-              fill="#E6F3FF"
+              fill="#D7E0E7"
               filter="drop-shadow(0px -5px 10px rgba(0, 84, 231, 0.1))"
             />
           </svg>
