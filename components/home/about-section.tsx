@@ -6,12 +6,12 @@ import Image from 'next/image';
 export default function AboutSection() {
   return (
     <section>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto py-21 mt-38">
         <div className="overflow-hidden">
           <div className="flex flex-col md:flex-row items-center">
             {/* Left Content - About Text */}
             <div className="md:w-4/5 p-8 md:p-12 lg:p-16">
-              <h2 className="text-6xl font-['Elephant'] text-primary mb-8">
+              <h2 className="text-6xl text-primary mb-8">
                 About Us
               </h2>
               
