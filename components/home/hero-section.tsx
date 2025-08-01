@@ -101,6 +101,7 @@ const HeroSection: React.FC = () => {
             />
           </svg>
         </div>
+
       </div>
     </div>
   );
