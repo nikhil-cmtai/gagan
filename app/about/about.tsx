@@ -40,7 +40,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-12 md:mb-0">
-              <h1 className="text-5xl md:text-6xl font-['Elephant'] text-primary mb-6">Our Story</h1>
+              <h1 className="text-5xl md:text-6xl font-[''] text-primary mb-6">Our Story</h1>
               <p className="text-secondary text-lg md:text-xl leading-relaxed mb-8">
                 Founded in 2018, Empire Blue began with a simple mission: to solve the global crisis of water expiry and contamination. Our team of scientists and engineers worked tirelessly to develop a revolutionary formula that keeps water fresh indefinitely.
               </p>
@@ -81,7 +81,7 @@ export default function About() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-['Elephant'] text-primary mb-6">Our Mission & Vision</h2>
+            <h2 className="text-4xl md:text-5xl font-[''] text-primary mb-6">Our Mission & Vision</h2>
             <p className="text-secondary text-lg md:text-xl leading-relaxed">
               We&apos;re committed to revolutionizing how the world thinks about water storage and consumption.
             </p>
@@ -97,7 +97,7 @@ export default function About() {
                     <path d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6ZM6.646 4.646l.708.708c-.29.29-.58.58-.708.708l-.708-.708c.29-.29.58-.58.708-.708Zm-1.292 1.292l-.708-.708c.29-.29.579-.579.708-.708l.708.708c-.29.29-.58.58-.708.708Zm3.292-3.292l.708.708c-.29.29-.58.58-.708.708l-.708-.708c.29-.29.58-.58.708-.708Zm-1.292 1.292l-.708-.708c.29-.29.579-.579.708-.708l.708.708c-.29.29-.58.58-.708.708Z"/>
                   </svg>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-['Elephant'] text-primary mb-4">Our Mission</h3>
+                <h3 className="text-2xl md:text-3xl font-[''] text-primary mb-4">Our Mission</h3>
                 <p className="text-secondary text-lg leading-relaxed mb-6">
                   To provide safe, bacteria-free, non-expiry water solutions to communities worldwide, tackling the global water crisis through revolutionary technology.
                 </p>
@@ -123,7 +123,7 @@ export default function About() {
                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM6.5 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm3 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm3 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-9 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm3 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm3 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
                   </svg>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-['Elephant'] text-primary mb-4">Our Vision</h3>
+                <h3 className="text-2xl md:text-3xl font-[''] text-primary mb-4">Our Vision</h3>
                 <p className="text-secondary text-lg leading-relaxed mb-6">
                   A world where everyone has access to safe drinking water that never expires, eliminating health concerns related to water contamination and storage.
                 </p>
@@ -149,7 +149,7 @@ export default function About() {
           <div className="bg-[#f3f9ff] rounded-3xl shadow-xl border-2 border-white overflow-hidden">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2 p-8 md:p-12">
-                <h2 className="text-4xl md:text-5xl font-['Elephant'] text-primary mb-6">Revolutionary Technology</h2>
+                <h2 className="text-4xl md:text-5xl font-[''] text-primary mb-6">Revolutionary Technology</h2>
                 <p className="text-secondary text-lg leading-relaxed mb-6">
                   Our patented water purification and preservation technology is the result of years of research and development. Unlike traditional methods that rely on chemicals with limited effectiveness, our approach creates a molecular barrier that prevents bacterial growth indefinitely.
                 </p>
@@ -225,7 +225,7 @@ export default function About() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-['Elephant'] text-primary mb-6">Meet Our Team</h2>
+            <h2 className="text-4xl md:text-5xl font-[''] text-primary mb-6">Meet Our Team</h2>
             <p className="text-secondary text-lg md:text-xl leading-relaxed">
               Our dedicated team of scientists, engineers, and water experts are committed to solving the global water crisis.
             </p>
@@ -285,7 +285,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-primary to-primary-dark rounded-3xl shadow-2xl overflow-hidden">
             <div className="p-8 md:p-12 lg:p-16 text-center">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-['Elephant'] text-white mb-6">Ready to Experience Non-Expiry Water?</h2>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-[''] text-white mb-6">Ready to Experience Non-Expiry Water?</h2>
               <p className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto mb-8">
                 Join us in our mission to revolutionize water consumption and storage. Contact us today to learn more about our products and technology.
               </p>

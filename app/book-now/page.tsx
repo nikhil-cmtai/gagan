@@ -1,4 +1,4 @@
-import Login from "./login";
+import Login from "./book-now";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -2,7 +2,7 @@ import React from 'react';
 
 export const BenefitsSection = () => {
   return (
-    <div>
+    <div className="p-21">
       <h2 className="text-center text-5xl text-primary font-bold mb-12">Health Benefits</h2> 
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

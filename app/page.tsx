@@ -1,6 +1,5 @@
 import HeroSection from '@/components/home/hero-section';
 import InfoSection from '@/components/home/info-section';
-// import HealthImpactSection from '@/components/home/health-impact-section';
 import CompanySection from '@/components/home/company-section';
 import AboutSection from '@/components/home/about-section';
 import DetailSection from '@/components/home/detail-section';
@@ -13,9 +12,6 @@ export default function Home() {
         {/* Hero Section */}
         <HeroSection />
 
-        {/* Benefits Section */}
-        <BenefitsSection />
-
         {/* About Section */}
         <AboutSection />
 
@@ -26,7 +22,7 @@ export default function Home() {
         <DetailSection />
 
         {/* Health Impact Section */}
-        {/* <HealthImpactSection /> */}
+        <BenefitsSection />
 
         {/* Company Section */}
         <CompanySection />

@@ -28,19 +28,19 @@ export default function Header() {
               <Link 
                 key={index}
                 href={item.href}
-                className="text-gray-600 hover:text-[#4284FF] transition-colors relative group text-lg font-['Elephant'] tracking-wide font-semibold"
+                className="text-gray-600 hover:text-[#4284FF] transition-colors relative group text-lg font-[''] tracking-wide font-semibold"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#4284FF] group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
 
-            {/* Login Button */}
+            {/* Book Now Button */}
             <Link 
-              href="/login"
-              className="relative overflow-hidden bg-[#4284FF] text-white px-6 py-1.5 rounded-full text-lg font-['Elephant'] tracking-wide group font-semibold"
+              href="/book-now"
+              className="relative overflow-hidden bg-[#4284FF] text-white px-6 py-1.5 rounded-full text-lg font-[''] tracking-wide group font-semibold"
             >
-              <span className="relative z-10">Login</span>
+              <span className="relative z-10">Book Now</span>
               <div className="absolute inset-0 bg-[#2563EB] transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             </Link>
           </nav>
@@ -66,18 +66,18 @@ export default function Header() {
               <Link 
                 key={index}
                 href={item.href}
-                className="block text-gray-600 hover:text-[#4284FF] transition-colors px-1 py-2 text-lg font-['Elephant'] tracking-wide"
+                className="block text-gray-600 hover:text-[#4284FF] transition-colors px-1 py-2 text-lg font-[''] tracking-wide"
               >
                 {item.name}
               </Link>
             ))}
 
-            {/* Mobile Login Button */}
+            {/* Mobile Book Now Button */}
             <Link 
-              href="/login"
-              className="block w-full bg-[#4284FF] text-white px-6 py-3.5 rounded-xl text-center text-lg font-['Elephant'] tracking-wide hover:bg-[#2563EB] transition-all duration-300 mt-4"
+              href="/book-now"
+              className="block w-full bg-[#4284FF] text-white px-6 py-3.5 rounded-xl text-center text-lg font-[''] tracking-wide hover:bg-[#2563EB] transition-all duration-300 mt-4"
             >
-              Login
+              Book Now
             </Link>
           </div>
         </div>

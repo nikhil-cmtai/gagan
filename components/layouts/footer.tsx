@@ -50,7 +50,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-gray-900 font-semibold mb-6 text-xl">Quick Links</h3>
             <ul className="space-y-4">
               <li>
                 <Link href="/about" className="text-gray-600 hover:text-[#1D22BF] transition-colors">
@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-6">Our Services</h3>
+            <h3 className="text-gray-900 font-semibold mb-6 text-xl">Our Services</h3>
             <ul className="space-y-4">
               <li>
                 <Link href="/services/water-testing" className="text-gray-600 hover:text-[#1D22BF] transition-colors">
@@ -104,7 +104,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-6">Contact Us</h3>
+            <h3 className="text-gray-900 font-semibold mb-6 text-xl">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <svg className="w-5 h-5 text-[#3B82F6] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

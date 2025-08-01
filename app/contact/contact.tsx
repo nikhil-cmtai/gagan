@@ -49,7 +49,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h1 className="text-5xl md:text-6xl font-['Elephant'] text-primary mb-6">Contact Us</h1>
+          <h1 className="text-5xl md:text-6xl font-[''] text-primary mb-6">Contact Us</h1>
           <p className="text-secondary text-lg md:text-xl leading-relaxed">
             Have questions about our revolutionary water technology? We&apos;re here to help! Fill out the form below and our team will get back to you shortly.
           </p>

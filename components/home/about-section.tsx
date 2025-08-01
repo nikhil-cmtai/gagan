@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function AboutSection() {
   return (
     <section>
-      <div className="max-w-7xl mx-auto py-21 mt-38">
+      <div className="max-w-7xl mx-auto">
         <div className="overflow-hidden">
           <div className="flex flex-col md:flex-row items-center">
             {/* Left Content - About Text */}
