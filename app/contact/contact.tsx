@@ -56,9 +56,9 @@ export default function Contact() {
         </div>
 
         <div className="bg-[#f3f9ff] rounded-3xl shadow-xl border-2 border-white overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-0">
             {/* Left - Contact Form */}
-            <div className="lg:col-span-2 p-6 sm:p-8 lg:p-12">
+            <div className="xl:col-span-2 p-6 sm:p-8 lg:p-12">
               {submitSuccess ? (
                 <div className="h-full flex flex-col items-center justify-center text-center py-12">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
@@ -71,7 +71,7 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
                       <input
@@ -102,7 +102,7 @@ export default function Contact() {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     {/* Phone */}
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number (Optional)</label>

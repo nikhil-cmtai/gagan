@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 export default function BookNow() {
@@ -546,7 +545,7 @@ export default function BookNow() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">Empire Blue Premium Water</h3>
-                  <p className="text-sm text-gray-600">World's First Non-Expiry Water</p>
+                  <p className="text-sm text-gray-600">World&apos;s First Non-Expiry Water</p>
                   <p className="text-sm text-gray-500">1 Unit = 20L</p>
                 </div>
               </div>
