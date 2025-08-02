@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
                                 <section>
                                     <h2 className="text-2xl font-bold text-primary mb-4">1. Introduction</h2>
                                     <p className="text-secondary leading-relaxed mb-4">
-                                        Empire Blue Pvt. Ltd. ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                                        Empire Blue Pvt. Ltd. (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
                                     </p>
                                     <p className="text-secondary leading-relaxed">
                                         By using our services, you agree to the collection and use of information in accordance with this policy.
@@ -136,7 +136,7 @@ export default function PrivacyPolicy() {
 
                                 {/* Children's Privacy */}
                                 <section>
-                                    <h2 className="text-2xl font-bold text-primary mb-4">8. Children's Privacy</h2>
+                                    <h2 className="text-2xl font-bold text-primary mb-4">8. Children&apos;s Privacy</h2>
                                     <p className="text-secondary leading-relaxed">
                                         Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us immediately.
                                     </p>
@@ -154,7 +154,7 @@ export default function PrivacyPolicy() {
                                 <section>
                                     <h2 className="text-2xl font-bold text-primary mb-4">10. Changes to This Privacy Policy</h2>
                                     <p className="text-secondary leading-relaxed">
-                                        We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. We encourage you to review this Privacy Policy periodically.
+                                        We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date. We encourage you to review this Privacy Policy periodically.
                                     </p>
                                 </section>
 

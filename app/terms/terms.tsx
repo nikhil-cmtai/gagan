@@ -22,7 +22,7 @@ export default function Terms() {
                                         By accessing and using the Empire Blue website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
                                     </p>
                                     <p className="text-secondary leading-relaxed">
-                                        These Terms of Service ("Terms") govern your use of our website and services operated by Empire Blue Pvt. Ltd. ("Company," "we," "us," or "our").
+                                        These Terms of Service (&quot;Terms&quot;) govern your use of our website and services operated by Empire Blue Pvt. Ltd. (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;).
                                     </p>
                                 </section>
 
@@ -145,7 +145,7 @@ export default function Terms() {
                                         <div>
                                             <h3 className="text-xl font-semibold text-gray-800 mb-2">Service Availability</h3>
                                             <p className="text-secondary leading-relaxed">
-                                                Our services are provided "as is" and "as available." We do not guarantee that our services will be uninterrupted, secure, or error-free.
+                                                Our services are provided &quot;as is&quot; and &quot;as available.&quot; We do not guarantee that our services will be uninterrupted, secure, or error-free.
                                             </p>
                                         </div>
                                         <div>
@@ -189,7 +189,7 @@ export default function Terms() {
                                 <section>
                                     <h2 className="text-2xl font-bold text-primary mb-4">12. Changes to Terms</h2>
                                     <p className="text-secondary leading-relaxed">
-                                        We reserve the right to modify these Terms at any time. We will notify users of any material changes by posting the new Terms on our website and updating the "Last updated" date. Your continued use of our services after such changes constitutes acceptance of the new Terms.
+                                        We reserve the right to modify these Terms at any time. We will notify users of any material changes by posting the new Terms on our website and updating the &quot;Last updated&quot; date. Your continued use of our services after such changes constitutes acceptance of the new Terms.
                                     </p>
                                 </section>
 
