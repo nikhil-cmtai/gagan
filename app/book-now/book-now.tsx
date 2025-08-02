@@ -191,11 +191,11 @@ export default function BookNow() {
             <div className="bg-gradient-to-r from-primary to-primary-dark p-6 sm:p-8 text-white">
               <div className="flex justify-center mb-4">
                 <Image
-                  src="/logo.png"
+                  src="/light-logo.png"
                   alt="Empire Blue Logo"
-                  width={180}
+                  width={140}
                   height={40}
-                  className="h-10 w-auto"
+                  className="h-24 w-auto"
                 />
               </div>
               <h1 className="text-2xl sm:text-3xl font-bold text-center">Book Your Order</h1>
