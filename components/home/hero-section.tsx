@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-start py-4 sm:py-8 lg:py-12 overflow-hidden">
+    <div className="flex items-start py-4 sm:py-8 lg:py-12 overflow-hidden">
 
       <div className="mx-auto w-full relative z-5">
         {/* Main Card with Stats */}
