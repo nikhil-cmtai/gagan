@@ -1,9 +1,42 @@
 import React from 'react';
+import Image from 'next/image';
+
 
 export const BenefitsSection = () => {
   return (
-    <div className="max-w-full mx-auto py-12 px-8 relative">
+    <div className="max-w-full mx-auto py-12 px-8 relative mt-12">
       <div className="max-w-7xl mx-auto bg-[#f3f9ff] shadow-lg rounded-3xl py-24 p-6 ">
+
+        {/* Full Width Wave Section - Now at the top */}
+        <div className="absolute -top-8 left-0 right-0 w-full z-25">
+          <svg
+            className="w-full h-[120px] sm:h-[300px] transform scale-y-[-1]"
+            viewBox="0 0 1440 500"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+          >
+            {/* White border that follows the curve */}
+            <path
+              d="M0,0 
+      C240,250 480,350 720,350 
+      C960,350 1200,250 1440,0"
+              stroke="#fff"
+              strokeWidth="14"
+              fill="none"
+            />
+            <path
+              d="M0,12 
+      C240,250 480,350 720,350 
+      C960,350 1200,250 1440,12 
+      L1440,500 L0,500 Z"
+              fill="#D7E0E7"
+              filter="drop-shadow(0px -5px 10px rgba(0, 84, 231, 0.1))"
+            />
+          </svg>
+        </div>
+
+
         <h2 className="text-center text-5xl text-primary font-bold mb-21">Health Benefits</h2>
 
         <div className="max-w-7xl mx-auto mb-42">
@@ -40,19 +73,7 @@ export const BenefitsSection = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-white rounded-full shadow-[inset_4px_4px_12px_rgba(0,0,0,0.15),inset_-4px_-4px_12px_rgba(255,255,255,0.9),8px_8px_24px_rgba(0,0,0,0.2),-8px_-4px_24px_rgba(255,255,255,0.8)] flex items-center justify-center">
                   <div className="w-20 h-20">
                     {/* Lung Illustration */}
-                    <svg viewBox="0 0 100 100" className="w-full h-full">
-                      {/* Left Lung */}
-                      <path d="M25 30 Q20 40 25 60 Q30 70 35 60 Q40 50 35 40 Q30 30 25 30"
-                        fill="#ff6b6b" stroke="#e74c3c" strokeWidth="1" />
-                      {/* Right Lung */}
-                      <path d="M65 30 Q60 40 65 60 Q70 70 75 60 Q80 50 75 40 Q70 30 65 30"
-                        fill="#ff6b6b" stroke="#e74c3c" strokeWidth="1" />
-                      {/* Trachea */}
-                      <rect x="45" y="20" width="10" height="40" fill="#74b9ff" stroke="#0984e3" strokeWidth="1" />
-                      {/* Bronchi */}
-                      <path d="M45 40 Q40 45 35 50" stroke="#74b9ff" strokeWidth="2" fill="none" />
-                      <path d="M55 40 Q60 45 65 50" stroke="#74b9ff" strokeWidth="2" fill="none" />
-                    </svg>
+                    <Image src="/lungs.png" alt="Lung Illustration" width={100} height={100} />
                   </div>
                 </div>
 
@@ -60,30 +81,22 @@ export const BenefitsSection = () => {
                 <div className="absolute inset-0">
                   {/* Top Icon - Heart */}
                   <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-red-500 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                    </svg>
+                    <Image src="/heart.png" alt="Heart Illustration" width={40} height={40} />
                   </div>
 
                   {/* Right Icon - Brain */}
                   <div className="absolute top-1/2 right-2 transform -translate-y-1/2 w-12 h-12 bg-pink-500 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-                    </svg>
+                    <Image src="/leaf.png" alt="Brain Illustration" width={40} height={40} />
                   </div>
 
                   {/* Bottom Icon - Kidney */}
                   <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-blue-600 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                    </svg>
+                    <Image src="/kidney.png" alt="Kidney Illustration" width={40} height={40} />
                   </div>
 
                   {/* Left Icon - Heart */}
                   <div className="absolute top-1/2 left-2 transform -translate-y-1/2 w-12 h-12 bg-orange-500 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                    </svg>
+                    <Image src="/vitamin.png" alt="Brain Illustration" width={40} height={40} />
                   </div>
                 </div>
               </div>
@@ -92,7 +105,7 @@ export const BenefitsSection = () => {
             {/* Mobile Cards - One card per row */}
             <div className="space-y-4">
               {/* Anthoxanthin */}
-              <div className="w-full border-2 border-white rounded-md p-4">
+              <div className="w-full rounded-md p-4">
                 <h3 className="font-bold text-black text-base mb-2">Anthoxanthin</h3>
                 <p className="text-xs text-primary leading-relaxed">
                   Antioxidant properties beneficial for cancer treatment and heart health.
@@ -101,7 +114,7 @@ export const BenefitsSection = () => {
               </div>
 
               {/* Chlorophyll */}
-              <div className="w-full border-2 border-white rounded-md p-4">
+              <div className="w-full rounded-md p-4">
                 <h3 className="font-bold text-black text-base mb-2">Chlorophyll</h3>
                 <p className="text-xs text-primary leading-relaxed">
                   Strengthens the immune system and help block cancer-causing chemicals.
@@ -110,7 +123,7 @@ export const BenefitsSection = () => {
               </div>
 
               {/* Lycopene */}
-              <div className="w-full border-2 border-white rounded-md p-4">
+              <div className="w-full rounded-md p-4">
                 <h3 className="font-bold text-black text-base mb-2">Lycopene</h3>
                 <p className="text-xs text-primary leading-relaxed">
                   Powerful antioxidant that reduces oxidative damage and inflammation.
@@ -119,7 +132,7 @@ export const BenefitsSection = () => {
               </div>
 
               {/* Carotenoids */}
-              <div className="w-full border-2 border-white rounded-md p-4">
+              <div className="w-full rounded-md p-4">
                 <h3 className="font-bold text-black text-base mb-2">Carotenoids</h3>
                 <p className="text-xs text-primary leading-relaxed">
                   Essential for vitamin A production supporting immune health.
@@ -128,7 +141,7 @@ export const BenefitsSection = () => {
               </div>
 
               {/* Anthocyanin */}
-              <div className="w-full border-2 border-white rounded-md p-4">
+              <div className="w-full rounded-md p-4">
                 <h3 className="font-bold text-black text-base mb-2">Anthocyanin</h3>
                 <p className="text-xs text-primary leading-relaxed">
                   Lowers blood pressure and reduces the risk of heart disease.
@@ -140,7 +153,7 @@ export const BenefitsSection = () => {
 
           {/* Desktop Layout - Original Design */}
           <div className="hidden lg:block">
-        <div className="relative flex justify-center items-center">
+            <div className="relative flex justify-center items-center">
               {/* Outer Ring - Proper Ring Shape */}
               <div className="relative w-[550px] h-[550px]">
                 {/* Ring using SVG for proper ring shape */}
@@ -169,76 +182,54 @@ export const BenefitsSection = () => {
 
                 {/* Inner Circle with Lung Illustration */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white rounded-full shadow-[inset_4px_4px_12px_rgba(0,0,0,0.15),inset_-4px_-4px_12px_rgba(255,255,255,0.9),8px_8px_24px_rgba(0,0,0,0.2),-8px_-4px_24px_rgba(255,255,255,0.8)] flex items-center justify-center">
-            <div className="w-32 h-32">
-              {/* Lung Illustration */}
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                {/* Left Lung */}
-                <path d="M25 30 Q20 40 25 60 Q30 70 35 60 Q40 50 35 40 Q30 30 25 30" 
-                        fill="#ff6b6b" stroke="#e74c3c" strokeWidth="1" />
-                {/* Right Lung */}
-                <path d="M65 30 Q60 40 65 60 Q70 70 75 60 Q80 50 75 40 Q70 30 65 30" 
-                        fill="#ff6b6b" stroke="#e74c3c" strokeWidth="1" />
-                {/* Trachea */}
-                      <rect x="45" y="20" width="10" height="40" fill="#74b9ff" stroke="#0984e3" strokeWidth="1" />
-                {/* Bronchi */}
-                      <path d="M45 40 Q40 45 35 50" stroke="#74b9ff" strokeWidth="2" fill="none" />
-                      <path d="M55 40 Q60 45 65 50" stroke="#74b9ff" strokeWidth="2" fill="none" />
-              </svg>
-            </div>
-          </div>
+                  <div className="w-32 h-32">
+                    {/* Lung Illustration */}
+                    <Image src="/lungs.png" alt="Lung Illustration" width={150} height={150} />
+                  </div>
+                </div>
 
                 {/* Icons aligned with cards - 4 corners + 1 below */}
                 <div className="absolute inset-0">
                   {/* Top Left Icon - Heart (aligned with Anthoxanthin card) */}
-                  <div className="absolute top-4 left-4 w-16 h-16 bg-red-500 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-              </svg>
-            </div>
+                  <div className="absolute top-4 left-4 w-16 h-16 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
+                    <Image src="/heart.png" alt="Heart Illustration" width={40} height={40} />
+                  </div>
 
                   {/* Top Right Icon - Brain (aligned with Chlorophyll card) */}
-                  <div className="absolute top-4 right-4 w-16 h-16 bg-pink-500 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
-              </svg>
-            </div>
+                  <div className="absolute top-4 right-4 w-16 h-16 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
+                    <Image src="/leaf.png" alt="Brain Illustration" width={40} height={40} />
+                  </div>
 
                   {/* Bottom Right Icon - Kidney (aligned with Lycopene card) */}
-                  <div className="absolute bottom-8 right-4 w-16 h-16 bg-blue-600 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
-            </div>
+                  <div className="absolute bottom-8 right-4 w-16 h-16 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
+                    <Image src="/kidney.png" alt="Kidney Illustration" width={40} height={40} />
+                  </div>
 
                   {/* Bottom Left Icon - Heart (aligned with Carotenoids card) - Moved up */}
-                  <div className="absolute bottom-12 left-4 w-16 h-16 bg-orange-500 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-              </svg>
-            </div>
+                  <div className="absolute bottom-12 left-4 w-16 h-16 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
+                    <Image src="/vitamin.png" alt="Brain Illustration" width={40} height={40} />
+                  </div>
 
                   {/* Below Icon - Stomach (aligned with Anthocyanin card) */}
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-16 h-16 bg-green-500 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
-            </div>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-16 h-16 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">  
+                    <Image src="/right.png" alt="Stomach Illustration" width={40} height={40} />
+                  </div>
 
-            {/* Connecting Lines */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none">
+                  {/* Connecting Lines */}
+                  <svg className="absolute inset-0 w-full h-full pointer-events-none">
                     <line x1="15%" y1="15%" x2="35%" y2="35%" stroke="#e0e0e0" strokeWidth="1" />
                     <line x1="85%" y1="15%" x2="65%" y2="35%" stroke="#e0e0e0" strokeWidth="1" />
                     <line x1="85%" y1="80%" x2="65%" y2="65%" stroke="#e0e0e0" strokeWidth="1" />
                     <line x1="15%" y1="75%" x2="35%" y2="65%" stroke="#e0e0e0" strokeWidth="1" />
                     <line x1="50%" y1="90%" x2="50%" y2="65%" stroke="#e0e0e0" strokeWidth="1" />
-            </svg>
-          </div>
-        </div>
+                  </svg>
+                </div>
+              </div>
 
               {/* Health Benefits Content - 4 corners + 1 below */}
               <div className="absolute w-full h-full">
                 {/* Top Left Corner - Anthoxanthin */}
-                <div className="absolute top-0 left-0 w-80 border-2 border-white rounded-md p-5">
+                <div className="absolute top-0 left-0 w-80 rounded-md p-5">
                   <h3 className="font-bold text-black text-lg mb-2">Anthoxanthin</h3>
                   <p className="text-sm text-primary leading-relaxed">
                     Antioxidant properties beneficial for cancer treatment and heart health.
@@ -247,7 +238,7 @@ export const BenefitsSection = () => {
                 </div>
 
                 {/* Top Right Corner - Chlorophyll */}
-                <div className="absolute top-0 right-0 w-80 border-2 border-white rounded-md p-5">
+                <div className="absolute top-0 right-0 w-80 rounded-md p-5">
                   <h3 className="font-bold text-black text-lg mb-2">Chlorophyll</h3>
                   <p className="text-sm text-primary leading-relaxed">
                     Strengthens the immune system and help block cancer-causing chemicals.
@@ -256,7 +247,7 @@ export const BenefitsSection = () => {
                 </div>
 
                 {/* Bottom Right Corner - Lycopene */}
-                <div className="absolute bottom-0 right-0 w-80 border-2 border-white rounded-md p-5">
+                <div className="absolute bottom-0 right-0 w-80 rounded-md p-5">
                   <h3 className="font-bold text-black text-lg mb-2">Lycopene</h3>
                   <p className="text-sm text-primary leading-relaxed">
                     Powerful antioxidant that reduces oxidative damage and inflammation.
@@ -265,58 +256,27 @@ export const BenefitsSection = () => {
                 </div>
 
                 {/* Bottom Left Corner - Carotenoids */}
-                <div className="absolute bottom-0 left-0 w-80 border-2 border-white rounded-md p-5">
+                <div className="absolute bottom-0 left-0 w-80 rounded-md p-5">
                   <h3 className="font-bold text-black text-lg mb-2">Carotenoids</h3>
                   <p className="text-sm text-primary leading-relaxed">
                     Essential for vitamin A production supporting immune health.
                     Reduces inflammation and promotes eye health while aiding hair growth.
                   </p>
-          </div>
+                </div>
 
                 {/* Below Circle - Anthocyanin */}
-                <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 translate-y-32 w-80 border-2 border-white rounded-md p-5">
+                <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 translate-y-32 w-80 rounded-md p-5">
                   <h3 className="font-bold text-black text-lg mb-2">Anthocyanin</h3>
                   <p className="text-sm text-primary leading-relaxed">
                     Lowers blood pressure and reduces the risk of heart disease.
                     Protects brain function and may slow cancer growth.
                   </p>
+                </div>
+              </div>
+            </div>
           </div>
-          </div>
-          </div>
-          </div>
-
-          {/* Full Width Wave Section - Moved higher up */}
-          <div className="absolute -bottom-8 left-0 right-0 w-full z-25">
-            <svg
-              className="w-full h-[120px] sm:h-[140px]"
-              viewBox="0 0 1440 500"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-            >
-              {/* White border that follows the curve */}
-              <path
-                d="M0,200 
-            C240,100 480,50 720,50 
-            C960,50 1200,100 1440,200"
-                stroke="#fff"
-                strokeWidth="14"
-                fill="none"
-              />
-              <path
-                d="M0,207 
-            C240,107 480,57 720,57 
-            C960,57 1200,107 1440,207 
-            L1440,500 L0,500 Z"
-                fill="#D7E0E7"
-                filter="drop-shadow(0px -5px 10px rgba(0, 84, 231, 0.1))"
-              />
-            </svg>
-          </div>
-
         </div>
-      </div>  
+      </div>
     </div>
   );
 };
-

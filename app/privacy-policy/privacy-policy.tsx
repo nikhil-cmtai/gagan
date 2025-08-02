@@ -43,7 +43,7 @@ export default function PrivacyPolicy() {
                                                 <li>Participate in surveys or promotions</li>
                                             </ul>
                                         </div>
-                                        <div>
+        <div>
                                             <h3 className="text-xl font-semibold text-gray-800 mb-2">Information We May Collect</h3>
                                             <ul className="list-disc list-inside text-secondary space-y-1">
                                                 <li>Name and contact information (email, phone number, address)</li>

@@ -10,7 +10,7 @@ export default function AboutSection() {
         <div className="overflow-hidden">
           <div className="flex flex-col md:flex-row items-center">
             {/* Left Content - About Text */}
-            <div className="md:w-4/5 p-8 md:p-12 lg:p-16">
+            <div className="md:w-4/5 p-8 md:p-12 lg:px-16">
               <h2 className="text-6xl text-primary mb-8">
                 About Us
               </h2>
