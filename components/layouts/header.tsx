@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ArrowRightIcon } from 'lucide-react';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -38,10 +39,10 @@ export default function Header() {
             {/* Book Now Button */}
             <Link 
               href="/book-now"
-              className="relative overflow-hidden bg-[#4284FF] text-white px-6 py-1.5 rounded-full text-lg font-[''] tracking-wide group font-semibold"
+              className="relative flex items-center gap-2 overflow-hidden bg-[#4284FF] hover:bg-[#2563EB] transition-colors text-white px-6 py-2 rounded-full text-lg tracking-wide font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-[#4284FF] focus:ring-offset-2"
             >
               <span className="relative z-10">Book Now</span>
-              <div className="absolute inset-0 bg-[#2563EB] transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+              <ArrowRightIcon className="w-4 h-4 relative z-10" />
             </Link>
           </nav>
 
@@ -78,6 +79,7 @@ export default function Header() {
               className="block w-full bg-[#4284FF] text-white px-6 py-3.5 rounded-xl text-center text-lg font-[''] tracking-wide hover:bg-[#2563EB] transition-all duration-300 mt-4"
             >
               Book Now
+              <ArrowRightIcon className="w-4 h-4" />
             </Link>
           </div>
         </div>
