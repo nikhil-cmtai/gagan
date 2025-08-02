@@ -573,7 +573,7 @@ export default function BookNow() {
               
               {/* Features */}
               <div className="bg-blue-50 rounded-xl p-4 mb-6">
-                <h4 className="font-semibold text-gray-800 mb-3">What you get:</h4>
+                <h4 className="font-semibold text-gray-800 mb-3 text-2xl">What you get:</h4>
                 <ul className="space-y-2 text-sm text-gray-700">
                   <li className="flex items-center">
                     <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
