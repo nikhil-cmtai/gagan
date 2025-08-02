@@ -143,14 +143,11 @@ export default function Footer() {
               © {new Date().getFullYear()} Imperial Water. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <Link href="/privacy" className="text-gray-600 hover:text-[#1D22BF] transition-colors text-sm">
+              <Link href="/privacy-policy" className="text-gray-600 hover:text-[#1D22BF] transition-colors text-sm">
                 Privacy Policy
               </Link>
               <Link href="/terms" className="text-gray-600 hover:text-[#1D22BF] transition-colors text-sm">
                 Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-600 hover:text-[#1D22BF] transition-colors text-sm">
-                Cookie Policy
               </Link>
             </div>
           </div>

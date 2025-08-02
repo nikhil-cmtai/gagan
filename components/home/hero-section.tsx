@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
               <div className="flex-1 flex justify-center lg:justify-start items-center relative z-10 mb-6 lg:mb-0 order-1">
                 <div className="relative w-[280px] sm:w-[350px] lg:w-[500px] aspect-[400/380]">
                   <Image
-                    src="/can.png"
+                    src="/can1.png"
                     alt="Empire Blue Can"
                     fill
                     className="object-contain"
