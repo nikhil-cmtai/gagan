@@ -1,9 +1,11 @@
 import HeroSection from '@/components/home/hero-section';
 import InfoSection from '@/components/home/info-section';
-import CompanySection from '@/components/home/company-section';
 import AboutSection from '@/components/home/about-section';
 import DetailSection from '@/components/home/detail-section';
 import { BenefitsSection } from '@/components/home/benefits-section';
+import AdvantageSection from '@/components/home/advantage-section';
+import MilestoneSection from '@/components/home/milestone-section';
+import TeamSection from '@/components/home/team-section';
 
 export default function Home() {
   return (
@@ -24,8 +26,14 @@ export default function Home() {
         {/* Health Impact Section */}
         <BenefitsSection />
 
-        {/* Company Section */}
-        <CompanySection />
+        {/* Advantage Section */}
+        <AdvantageSection />
+
+        {/* Milestone Section */}
+        <MilestoneSection />
+
+        {/* Team Section */}
+        <TeamSection />
       </div>
     </main>
   );
