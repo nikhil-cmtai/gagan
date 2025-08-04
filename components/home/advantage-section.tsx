@@ -36,7 +36,7 @@ const advantages = [
 
 const AdvantageSection = () => {
     return (
-        <div className="py-16 px-4 mt-21">
+        <div className="py-16 px-4">
             <div className="max-w-7xl mx-auto relative">
                 <h2 className="text-center text-3xl md:text-5xl text-primary font-bold mb-12">Competitive Advantage Beyond The Ordinary</h2>
                 
