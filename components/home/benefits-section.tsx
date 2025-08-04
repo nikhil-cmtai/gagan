@@ -5,12 +5,12 @@ import Image from 'next/image';
 export const BenefitsSection = () => {
   return (
     <div className="max-w-full mx-auto py-12 px-8 relative mt-12">
-      <div className="max-w-7xl mx-auto bg-[#f3f9ff] shadow-lg rounded-3xl py-24 p-6 ">
+      <div className="max-w-7xl mx-auto bg-[#f3f9ff] shadow-lg rounded-3xl py-16 md:py-24 p-6 ">
 
         {/* Full Width Wave Section - Now at the top */}
         <div className="absolute -top-8 left-0 right-0 w-full z-25">
           <svg
-            className="w-full h-[120px] sm:h-[300px] transform scale-y-[-1]"
+            className="w-full h-[140px] sm:h-[300px] transform scale-y-[-1] mt-12 sm:mt-0"
             viewBox="0 0 1440 500"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -37,9 +37,9 @@ export const BenefitsSection = () => {
         </div>
 
 
-        <h2 className="text-center text-5xl text-primary font-bold mb-21">Health Benefits</h2>
+        <h2 className="text-center text-3xl md:text-5xl text-primary font-bold mb-12">Health Benefits</h2>
 
-        <div className="max-w-7xl mx-auto mb-42">
+        <div className="max-w-7xl mx-auto mb-0 md:mb-42">
           {/* Mobile Layout - Circle at start, cards below in single row */}
           <div className="block lg:hidden">
             {/* Central Circle for Mobile */}
@@ -102,8 +102,8 @@ export const BenefitsSection = () => {
               </div>
             </div>
 
-            {/* Mobile Cards - One card per row */}
-            <div className="space-y-4">
+            {/* Cards Grid - Responsive for sm, md, etc. */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {/* Anthoxanthin */}
               <div className="w-full rounded-md p-4">
                 <h3 className="font-bold text-black text-base mb-2">Anthoxanthin</h3>

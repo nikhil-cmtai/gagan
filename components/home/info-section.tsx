@@ -16,20 +16,14 @@ const InfoSection = () => {
                   Current Situation
                 </h3>
                 <p className="text-secondary text-md sm:text-lg mb-3 leading-relaxed">
-                  Approximately 2.2 billion people do not have access to safe drinking water and 3.5 billion people do not have access to clean drinking water.
-                </p>
-                <p className="text-secondary text-md sm:text-lg mb-3 leading-relaxed">
-                  This problem is increasing due to the rapidly increasing population.
-                </p>
-                <p className="text-secondary text-md sm:text-lg mb-3 leading-relaxed">
-                  Poor water management has further aggravated the crisis.
-                </p>
+                  Approximately 2.2 billion people do not have access to safe drinking water and 3.5 billion people do not have access to clean drinking water.                   This problem is increasing due to the rapidly increasing population.                   Poor water management has further aggravated the crisis.    </p>
+
                 <p className="text-secondary text-md sm:text-lg leading-relaxed">
-                  The top countries facing severe water crisis include Lebanon, Pakistan, Afghanistan, Syria.
+                  The top countries facing severe water crisis include Lebanon, Pakistan, Afghanistan, Syria, Yemen, and Ethiopia.
                 </p>
               </div>
             </div>
-            
+
             {/* Right Column */}
             <div className="w-full max-w-sm lg:max-w-md mx-auto lg:mx-0 text-center lg:text-right relative z-20">
               <div>
@@ -45,7 +39,7 @@ const InfoSection = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Water Droplet - Centered between content */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none opacity-70 hidden lg:block">
             <div className="relative w-[180px] h-[180px] xl:w-[240px] xl:h-[240px]">
@@ -58,7 +52,7 @@ const InfoSection = () => {
               />
             </div>
           </div>
-          
+
           {/* Mobile/Tablet Water Droplet - Shown between columns */}
           <div className="lg:hidden absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 z-10 pointer-events-none opacity-70">
             <div className="relative w-[60px] h-[60px] md:w-[80px] md:h-[80px]">
@@ -77,6 +71,6 @@ const InfoSection = () => {
   );
 };
 
-export default InfoSection; 
+export default InfoSection;
 
 

@@ -48,7 +48,7 @@ export default function About() {
                 Today, we&apos;re proud to offer the world&apos;s first truly non-expiry water solution, helping communities worldwide access safe drinking water without worrying about expiration dates or bacterial contamination.
               </p>
             </div>
-            <div className="md:w-1/2 md:pl-12">
+            <div className=" w-full md:w-1/2 md:pl-12">
               <div className="relative h-80 md:h-96 w-full rounded-3xl overflow-hidden shadow-2xl border-2 border-white">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent z-10"></div>
                 <Image
