@@ -6,6 +6,7 @@ import { BenefitsSection } from '@/components/home/benefits-section';
 import AdvantageSection from '@/components/home/advantage-section';
 import MilestoneSection from '@/components/home/milestone-section';
 import TeamSection from '@/components/home/team-section';
+import CTA from '@/components/home/cta-section';
 
 export default function Home() {
   return (
@@ -34,6 +35,9 @@ export default function Home() {
 
         {/* Team Section */}
         <TeamSection />
+
+        {/* CTA Section */}
+        <CTA />
       </div>
     </main>
   );

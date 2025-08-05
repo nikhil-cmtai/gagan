@@ -1,0 +1,74 @@
+import React from 'react';
+import Link from 'next/link';
+
+const ColorDots = ({ position }: { position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' }) => {
+  let positionClasses = '';
+  
+  switch (position) {
+    case 'top-left':
+      positionClasses = 'top-4 left-4 md:top-8 md:left-8';
+      break;
+    case 'top-right':
+      positionClasses = 'top-4 right-4 md:top-8 md:right-8';
+      break;
+    case 'bottom-left':
+      positionClasses = 'bottom-4 left-4 md:bottom-8 md:left-8';
+      break;
+    case 'bottom-right':
+      positionClasses = 'bottom-4 right-4 md:bottom-8 md:right-8';
+      break;
+  }
+  
+  return (
+    <div className={`absolute ${positionClasses}`}>
+      <div className="flex gap-1 md:gap-1.5">
+        <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-red-500"></div>
+        <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-green-500"></div>
+        <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-blue-500"></div>
+      </div>
+      <div className="flex gap-1 md:gap-1.5 ml-2 md:ml-4 mt-1 md:mt-2">
+        <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-red-500"></div>
+        <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-green-500"></div>
+        <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-blue-500"></div>
+      </div>
+      <div className="flex gap-1 md:gap-1.5 ml-4 md:ml-8 mt-1 md:mt-2">
+        <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-red-500"></div>
+        <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-green-500"></div>
+        <div className="h-1.5 w-1.5 md:h-2 md:w-2 rounded-full bg-blue-500"></div>
+      </div>
+    </div>
+  );
+};
+
+export default function CTA() {
+  return (
+    <div className="py-16 px-4">
+      <div className="max-w-4xl mx-auto bg-[#f3f9ff] rounded-3xl shadow-lg p-6 md:p-12 relative">
+        <ColorDots position="top-left" />
+        <ColorDots position="top-right" />
+        
+        <div className="text-center mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 mt-6 md:mt-0">
+            <span className="text-gray-800">Take the </span>
+            <span className="text-blue-600">Next Step</span>
+          </h2>
+          <h3 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6">Towards Better Health</h3>
+          
+          <p className="text-gray-500 max-w-2xl mx-auto mb-10">
+            Ready to experience our exceptional care? Schedule an appointment today and 
+            discover how we can help you live your healthiest life.
+          </p>
+          
+          <Link href="/contact">
+            <div className="inline-block bg-blue-600 text-white font-bold py-3 px-8 md:py-4 md:px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+              Book Now
+            </div>
+          </Link>
+        </div>
+        
+        <ColorDots position="bottom-left" />
+        <ColorDots position="bottom-right" />
+      </div>
+    </div>
+  );
+}

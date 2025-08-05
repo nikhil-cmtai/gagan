@@ -103,7 +103,7 @@ const MilestoneSection = () => {
 
                     {/* Timeline with milestone numbers */}
                     <div className="flex justify-center mb-16 gap-4 sm:gap-6 md:gap-10">
-                        {milestones.map((milestone, idx) => (
+                        {milestones.map((milestone) => (
                             <div
                                 key={milestone.number}
                                 className="relative flex flex-col items-center"
