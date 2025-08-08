@@ -59,7 +59,7 @@ export default function CTA() {
             discover how we can help you live your healthiest life.
           </p>
           
-          <Link href="/contact">
+          <Link href="/book-now">
             <div className="inline-block bg-blue-600 text-white font-bold py-3 px-8 md:py-4 md:px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
               Book Now
             </div>
