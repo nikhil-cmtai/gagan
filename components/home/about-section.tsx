@@ -8,7 +8,7 @@ export default function AboutSection() {
     <section>
       <div className="max-w-7xl mx-auto">
         <div className="overflow-hidden">
-          <div className="flex flex-col md:flex-row items-center">
+          <div className="flex flex-col md:flex-row items-center px-2">
             {/* Left Content - About Text */}
             <div className="md:w-4/5 p-8 md:p-12 lg:px-16">
               <h2 className="text-6xl text-primary mb-8">

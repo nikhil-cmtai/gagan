@@ -4,32 +4,32 @@ const advantages = [
   {
     icon: "🌎",
     title: "World's first non-expiry water",
-    description: "Our revolutionary water that never expires"
+    description: "Our revolutionary water that never expires, ensuring unmatched quality and freshness for decades, making it a unique choice in the modern world today."
   },
   {
     icon: "❤️",
     title: "Health benefits",
-    description: "Unique water formulation helps prevent major health risks such as cancer and heart attacks while boosting the immune system"
+    description: "Unique water formulation helps prevent major health risks such as cancer and heart attacks while boosting the immune system for long-term vitality and daily wellness."
   },
   {
     icon: "⭐",
     title: "Premium mineral enrichment",
-    description: "Infused with essential minerals Ever Fresh provides superior nourishment compared to regular bottled water"
+    description: "Infused with essential minerals Ever Fresh provides superior nourishment compared to regular bottled water, promoting overall health and energy all day long every day."
   },
   {
     icon: "✓",
     title: "Bacteria free",
-    description: "Ensure that never release microplastic or harmful bacteria"
+    description: "Ensure that never release microplastic or harmful bacteria, keeping the water clean and perfectly safe for everyone, anywhere, with consistent purity at every single sip."
   },
   {
     icon: "⚙️",
     title: "Technology",
-    description: "Utilization of cutting edge - ultra purification and preservation methods to maintain water qualities"
+    description: "Utilization of cutting edge - ultra purification and preservation methods to maintain water qualities, offering unmatched performance and innovation in safe hydration."
   },
   {
     icon: "🥤",
     title: "Preservation",
-    description: "With no expiry date consumers can store the product indefinitely without the risk of contamination or quality degradation reducing frequent repurcesing cost"
+    description: "With no expiry date consumers can store the product indefinitely without the risk of contamination or quality degradation reducing frequent repurcesing cost."
   }
 ];
 

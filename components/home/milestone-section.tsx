@@ -4,35 +4,33 @@ const milestones = [
     {
         year: 2026,
         title: "Ever Fresh",
-        subtitle: "Project kickoff",
+        subtitle: "Project Kickoff",
         details: [
-            "After Series A Round funding",
-            "We will launch our base segment brand Royal fresh minerals",
-            "World's first non expiry water bottle",
-            "We will take 10 Rs on each unit"
+            "Launch of Royal Fresh Minerals, our base segment brand.",
+            "Introducing the world's first non-expiry water bottle.",
+            "Each unit will be priced at ₹10 for accessible hydration."
         ],
         position: "bottom",
         number: 1
     },
     {
         year: 2027,
-        title: "Home care",
-        subtitle: "product",
+        title: "Home Care",
+        subtitle: "Product Expansion",
         details: [
-            "We will launch our other base segment product Colin, Dish wash, Toilet cleaner, fursh cleaner",
-            "We will take different different prices on every separate product As per market validation"
+            "Launch of Colin, Dish Wash, Toilet Cleaner, and Floor Cleaner.",
+            "Pricing for each product will be set after market validation."
         ],
         position: "top",
         number: 2
     },
     {
         year: 2028,
-        title: "Vehicle care",
-        subtitle: "segment",
+        title: "Vehicle Care",
+        subtitle: "Segment Launch",
         details: [
-            "After Rised Series B Round Funding",
-            "We will launch our next level segment product DM water (battery water),coolant,DEF water",
-            "We will take different different prices on every separate product As per market validation"
+            "Introduction of DM Water (battery), Coolant, and DEF Water.",
+            "Each product will be priced individually after market research."
         ],
         position: "bottom",
         number: 3
@@ -40,10 +38,10 @@ const milestones = [
     {
         year: 2029,
         title: "Ultra Pure",
-        subtitle: "our Premium segment",
+        subtitle: "Premium Segment",
         details: [
-            "We will launch our premium brand after Series C round of funding, upgrade it with premium enhancements,",
-            "provide more enhanced minerals and more health benefits, use professional branding with premium transparent glass bottle packaging and charge ₹5,000 per unit"
+            "Launch of our premium brand with enhanced minerals and benefits.",
+            "Premium glass bottle packaging, professional branding, ₹5,000 per unit."
         ],
         position: "top",
         number: 4
@@ -51,10 +49,10 @@ const milestones = [
     {
         year: 2030,
         title: "Java",
-        subtitle: "Major achievement",
+        subtitle: "Major Achievement",
         details: [
-            "After Venture Capital Series round of funding we will launch our highest premium segment brand.",
-            "We will upgrade it with premium enhancements and more health benefits. We will use highest premium transparent glass bottle and use good professional branding with super premium packaging. We will charge ₹25000 per unit."
+            "Launch of our highest premium segment brand with top enhancements.",
+            "Super premium glass bottle, elite branding, priced at ₹25,000 per unit."
         ],
         position: "bottom",
         number: 5
@@ -80,7 +78,6 @@ const MilestoneSection = () => {
                             <h3 className="text-xl font-bold">
                                 <span className="text-primary">Our </span>
                                 <span className="text-primary">{milestones[1].title} {milestones[1].subtitle}</span>
-                                <span className="text-black"> In {milestones[1].year}</span>
                             </h3>
                             <div className="mt-2">
                                 {milestones[1].details.map((detail, idx) => (
@@ -91,7 +88,7 @@ const MilestoneSection = () => {
                         <div className="w-1/3 px-4">
                             <h3 className="text-xl font-bold">
                                 <span className="text-primary">{milestones[3].title}</span>
-                                <span className="text-black"> {milestones[3].subtitle} In {milestones[3].year}</span>
+                                <span className="text-black"> {milestones[3].subtitle}</span>
                             </h3>
                             <div className="mt-2">
                                 {milestones[3].details.map((detail, idx) => (
@@ -101,17 +98,17 @@ const MilestoneSection = () => {
                         </div>
                     </div>
 
-                    {/* Timeline with milestone numbers */}
+                    {/* Timeline with milestone years */}
                     <div className="flex justify-center mb-16 gap-4 sm:gap-6 md:gap-10">
                         {milestones.map((milestone) => (
                             <div
                                 key={milestone.number}
                                 className="relative flex flex-col items-center"
                             >
-                                {/* Number box with arrow */}
+                                {/* Year box with arrow */}
                                 <div className="relative flex items-center">
-                                    <div className="w-16 h-16 sm:w-20 sm:h-20 border-4 border-white flex items-center justify-center rounded-lg text-3xl sm:text-4xl font-bold bg-white shadow-md">
-                                        {milestone.number}
+                                    <div className="w-20 h-20 sm:w-24 sm:h-24 border-4 border-white flex items-center justify-center rounded-lg text-2xl sm:text-3xl font-bold bg-white shadow-md text-primary">
+                                        {milestone.year}
                                     </div>
                                     {milestone.number < 5 && (
                                         <div className="ml-2 sm:ml-4 flex items-center">
@@ -128,7 +125,7 @@ const MilestoneSection = () => {
                         <div className="w-1/3 px-4">
                             <h3 className="text-xl font-bold">
                                 <span className="text-primary">{milestones[0].title}</span>
-                                <span className="text-black"> {milestones[0].subtitle} In {milestones[0].year}</span>
+                                <span className="text-black"> {milestones[0].subtitle}</span>
                             </h3>
                             <div className="mt-2">
                                 {milestones[0].details.map((detail, idx) => (
@@ -140,7 +137,6 @@ const MilestoneSection = () => {
                             <h3 className="text-xl font-bold">
                                 <span className="text-primary">Our </span>
                                 <span className="text-primary">{milestones[2].title} {milestones[2].subtitle}</span>
-                                <span className="text-black"> In {milestones[2].year}</span>
                             </h3>
                             <div className="mt-2">
                                 {milestones[2].details.map((detail, idx) => (
@@ -151,7 +147,7 @@ const MilestoneSection = () => {
                         <div className="w-1/3 px-4">
                             <h3 className="text-xl font-bold">
                                 <span className="text-primary">{milestones[4].title}</span>
-                                <span className="text-black"> {milestones[4].subtitle} In {milestones[4].year}</span>
+                                <span className="text-black"> {milestones[4].subtitle}</span>
                             </h3>
                             <div className="mt-2">
                                 {milestones[4].details.map((detail, idx) => (
@@ -167,8 +163,8 @@ const MilestoneSection = () => {
                     {milestones.map((milestone) => (
                         <div key={milestone.number} className="mb-10 pb-10 border-b border-gray-200 last:border-0">
                             <div className="flex items-center mb-4">
-                                <div className="w-10 h-10 bg-white border-2 border-primary flex items-center justify-center rounded-lg text-xl font-bold text-primary shadow-md mr-4">
-                                    {milestone.number}
+                                <div className="w-16 h-16 bg-white border-2 border-primary flex items-center justify-center rounded-lg text-lg font-bold text-primary shadow-md mr-4">
+                                    {milestone.year}
                                 </div>
                                 <h3 className="text-lg font-bold">
                                     {milestone.title === "Home care" || milestone.title === "Vehicle care" ? (
@@ -182,10 +178,9 @@ const MilestoneSection = () => {
                                             <span className="text-black"> {milestone.subtitle}</span>
                                         </>
                                     )}
-                                    <span className="text-black"> In {milestone.year}</span>
                                 </h3>
                             </div>
-                            <div className="pl-14">
+                            <div className="pl-20">
                                 {milestone.details.map((detail, idx) => (
                                     <p key={idx} className="text-sm text-black mb-2">{detail}</p>
                                 ))}

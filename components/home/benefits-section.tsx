@@ -10,8 +10,8 @@ export const BenefitsSection = () => {
         {/* Full Width Wave Section - Now at the top */}
         <div className="absolute -top-8 left-0 right-0 w-full z-25">
           <svg
-            className="w-full h-[140px] sm:h-[300px] transform scale-y-[-1] mt-12 sm:mt-0"
-            viewBox="0 0 1440 500"
+            className="w-full h-[140px] sm:h-[280px] transform scale-y-[-1] mt-12 sm:mt-0"
+            viewBox="0 0 1440 480"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
@@ -19,17 +19,15 @@ export const BenefitsSection = () => {
             {/* White border that follows the curve */}
             <path
               d="M0,0 
-      C240,250 480,350 720,350 
-      C960,350 1200,250 1440,0"
+      C320,320 1120,320 1440,0"
               stroke="#fff"
-              strokeWidth="14"
+              strokeWidth="10"
               fill="none"
             />
             <path
-              d="M0,12 
-      C240,250 480,350 720,350 
-      C960,350 1200,250 1440,12 
-      L1440,500 L0,500 Z"
+              d="M0,10 
+      C320,320 1120,320 1440,10 
+      L1440,480 L0,480 Z"
               fill="#D7E0E7"
               filter="drop-shadow(0px -5px 10px rgba(0, 84, 231, 0.1))"
             />
@@ -59,9 +57,9 @@ export const BenefitsSection = () => {
                     </filter>
                   </defs>
 
-                  {/* Ring shape - donut with hole */}
+                  {/* Ring shape - donut with hole - REDUCED SPACE between rings */}
                   <path
-                    d="M175 50 A125 125 0 0 1 300 175 A125 125 0 0 1 175 300 A125 125 0 0 1 50 175 A125 125 0 0 1 175 50 Z M175 75 A100 100 0 0 0 75 175 A100 100 0 0 0 175 275 A100 100 0 0 0 275 175 A100 100 0 0 0 175 75 Z"
+                    d="M175 50 A125 125 0 0 1 300 175 A125 125 0 0 1 175 300 A125 125 0 0 1 50 175 A125 125 0 0 1 175 50 Z M175 90 A85 85 0 0 0 90 175 A85 85 0 0 0 175 260 A85 85 0 0 0 260 175 A85 85 0 0 0 175 90 Z"
                     fill="url(#ringGradientMobile)"
                     stroke="#d1d5db"
                     strokeWidth="1"
@@ -170,9 +168,9 @@ export const BenefitsSection = () => {
                     </filter>
                   </defs>
 
-                  {/* Ring shape - donut with hole */}
+                  {/* Ring shape - donut with hole - REDUCED SPACE between rings */}
                   <path
-                    d="M275 50 A225 225 0 0 1 500 275 A225 225 0 0 1 275 500 A225 225 0 0 1 50 275 A225 225 0 0 1 275 50 Z M275 100 A175 175 0 0 0 100 275 A175 175 0 0 0 275 450 A175 175 0 0 0 450 275 A175 175 0 0 0 275 100 Z"
+                    d="M275 50 A225 225 0 0 1 500 275 A225 225 0 0 1 275 500 A225 225 0 0 1 50 275 A225 225 0 0 1 275 50 Z M275 120 A155 155 0 0 0 120 275 A155 155 0 0 0 275 430 A155 155 0 0 0 430 275 A155 155 0 0 0 275 120 Z"
                     fill="url(#ringGradient)"
                     stroke="#d1d5db"
                     strokeWidth="1"

@@ -43,7 +43,7 @@ const ColorDots = ({ position }: { position: 'top-left' | 'top-right' | 'bottom-
 export default function CTA() {
   return (
     <div className="py-16 px-4">
-      <div className="max-w-4xl mx-auto bg-[#f3f9ff] rounded-3xl shadow-lg p-6 md:p-12 relative">
+      <div className="max-w-6xl mx-auto bg-[#f3f9ff] rounded-3xl shadow-lg p-6 md:p-12 relative">
         <ColorDots position="top-left" />
         <ColorDots position="top-right" />
         
