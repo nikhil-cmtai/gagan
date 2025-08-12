@@ -34,19 +34,20 @@ const TeamSection = () => {
                 {/* Founder Section - Top row with image left, description right */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-12 mb-20">
                     {/* Founder Image - Left side */}
-                    <div className="w-full md:w-1/3 flex justify-center">
+                    <div className="w-full md:w-1/3 flex justify-center px-6 sm:px-10 md:px-0">
                         <div className="w-full max-w-sm">
                             <div className="bg-white rounded-3xl p-4 shadow-xl mx-auto relative">
-                                <div className="aspect-square overflow-hidden rounded-2xl">
+                                <div className="aspect-[3/4] overflow-hidden rounded-2xl">
                                     <Image
                                         src={teamMembers[0].image}
                                         alt={teamMembers[0].name}
                                         width={600}
-                                        height={600}
+                                        height={800}
                                         className="w-full h-full object-cover"
                                         priority
                                     />
                                 </div>
+                                
                                 {/* White info card at bottom */}
                                 <div className="absolute -bottom-10 left-0 right-0 mx-8 bg-white rounded-xl p-4 shadow-lg">
                                     <p className="text-center font-bold text-xl text-gray-800">{teamMembers[0].name}</p>
@@ -84,15 +85,15 @@ const TeamSection = () => {
                     <h3 className="text-3xl font-semibold text-primary mb-12 text-center">Leadership Team</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
                         {teamMembers.slice(1).map((member, index) => (
-                            <div key={index} className="flex flex-col items-center w-full">
+                            <div key={index} className="flex flex-col items-center w-full px-6 sm:px-8 md:px-4">
                                 <div className="w-full max-w-xs mx-auto">
                                     <div className="bg-white rounded-3xl p-4 shadow-xl relative">
-                                        <div className="aspect-square overflow-hidden rounded-2xl">
+                                        <div className="aspect-[3/4] overflow-hidden rounded-2xl">
                                             <Image
                                                 src={member.image}
                                                 alt={member.name}
                                                 width={500}
-                                                height={500}
+                                                height={667}
                                                 className="w-full h-full object-cover"
                                                 priority
                                             />

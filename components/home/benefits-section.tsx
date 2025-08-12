@@ -78,23 +78,23 @@ export const BenefitsSection = () => {
                 {/* Icons around the ring for mobile */}
                 <div className="absolute inset-0">
                   {/* Top Icon - Heart */}
-                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-red-500 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <Image src="/heart.png" alt="Heart Illustration" width={40} height={40} />
+                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-red-500 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
+                    <Image src="/heart.png" alt="Heart Illustration" width={60} height={60} />
                   </div>
 
                   {/* Right Icon - Brain */}
-                  <div className="absolute top-1/2 right-2 transform -translate-y-1/2 w-12 h-12 bg-pink-500 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <Image src="/leaf.png" alt="Brain Illustration" width={40} height={40} />
+                  <div className="absolute top-1/2 right-2 transform -translate-y-1/2 w-14 h-14 bg-pink-500 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
+                    <Image src="/leaf.png" alt="Brain Illustration" width={60} height={60} />
                   </div>
 
                   {/* Bottom Icon - Kidney */}
-                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-blue-600 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <Image src="/kidney.png" alt="Kidney Illustration" width={40} height={40} />
+                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-blue-600 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
+                    <Image src="/kidney.png" alt="Kidney Illustration" width={60} height={60} />
                   </div>
 
                   {/* Left Icon - Heart */}
-                  <div className="absolute top-1/2 left-2 transform -translate-y-1/2 w-12 h-12 bg-orange-500 rounded-full shadow-[inset_2px_2px_8px_rgba(0,0,0,0.2),inset_-2px_-2px_8px_rgba(255,255,255,0.3),4px_4px_16px_rgba(0,0,0,0.1),-4px_-4px_16px_rgba(255,255,255,0.8)] flex items-center justify-center">
-                    <Image src="/vitamin.png" alt="Brain Illustration" width={40} height={40} />
+                  <div className="absolute top-1/2 left-2 transform -translate-y-1/2 w-14 h-14 rounded-full  flex items-center justify-center">
+                    <Image src="/vitamin.png" alt="Brain Illustration" width={60} height={60} />
                   </div>
                 </div>
               </div>
