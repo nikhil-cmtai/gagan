@@ -1,8 +1,10 @@
 import React from 'react';
+import Image from 'next/image';
 
 const milestones = [
     {
-        year: 2026,
+        year: '2026',
+        yearImage: '/2026.png',
         title: "Ever Fresh",
         subtitle: "Project Kickoff",
         details: [
@@ -14,7 +16,8 @@ const milestones = [
         number: 1
     },
     {
-        year: 2027,
+        year: '2027',
+        yearImage: '/2027.png',
         title: "Home Care",
         subtitle: "Product Expansion",
         details: [
@@ -25,7 +28,8 @@ const milestones = [
         number: 2
     },
     {
-        year: 2028,
+        year: '2028',
+        yearImage: '/2028.png',
         title: "Vehicle Care",
         subtitle: "Segment Launch",
         details: [
@@ -36,7 +40,8 @@ const milestones = [
         number: 3
     },
     {
-        year: 2029,
+        year: '2029',
+        yearImage: '/2029.png',
         title: "Ultra Pure",
         subtitle: "Premium Segment",
         details: [
@@ -47,7 +52,8 @@ const milestones = [
         number: 4
     },
     {
-        year: 2030,
+        year: '2030',
+        yearImage: '/2030.png',
         title: "Java",
         subtitle: "Major Achievement",
         details: [
@@ -107,8 +113,18 @@ const MilestoneSection = () => {
                             >
                                 {/* Year box with arrow */}
                                 <div className="relative flex items-center">
-                                    <div className="w-20 h-20 sm:w-24 sm:h-24 border-4 border-white flex items-center justify-center rounded-lg text-2xl sm:text-3xl font-bold bg-white shadow-md text-primary">
-                                        {milestone.year}
+                                    <div className="w-40 h-40 sm:w-40 sm:h-40 flex items-center justify-center rounded-lg text-2xl sm:text-3xl font-bold text-primary overflow-hidden">
+                                        {milestone.yearImage ? (
+                                            <Image 
+                                                src={milestone.yearImage} 
+                                                alt={`Year ${milestone.year}`} 
+                                                width={100} 
+                                                height={100} 
+                                                className="w-full h-full object-contain"
+                                            />
+                                        ) : (
+                                            milestone.year
+                                        )}
                                     </div>
                                     {milestone.number < 5 && (
                                         <div className="ml-2 sm:ml-4 flex items-center">
@@ -163,11 +179,21 @@ const MilestoneSection = () => {
                     {milestones.map((milestone) => (
                         <div key={milestone.number} className="mb-10 pb-10 border-b border-gray-200 last:border-0">
                             <div className="flex items-center mb-4">
-                                <div className="w-16 h-16 bg-white border-2 border-primary flex items-center justify-center rounded-lg text-lg font-bold text-primary shadow-md mr-4">
-                                    {milestone.year}
+                                <div className="w-16 h-16 bg-white border-2 border-primary flex items-center justify-center rounded-lg text-lg font-bold text-primary shadow-md mr-4 overflow-hidden">
+                                    {milestone.yearImage ? (
+                                        <Image 
+                                            src={milestone.yearImage} 
+                                            alt={`Year ${milestone.year}`} 
+                                            width={64} 
+                                            height={64} 
+                                            className="w-full h-full object-contain"
+                                        />
+                                    ) : (
+                                        milestone.year
+                                    )}
                                 </div>
                                 <h3 className="text-lg font-bold">
-                                    {milestone.title === "Home care" || milestone.title === "Vehicle care" ? (
+                                    {milestone.title === "Home Care" || milestone.title === "Vehicle Care" ? (
                                         <>
                                             <span className="text-primary">Our </span>
                                             <span className="text-primary">{milestone.title} {milestone.subtitle}</span>
