@@ -37,6 +37,42 @@ const DetailSection = () => {
                     </div>
 
                 </div>
+                
+                {/* Feature cards grid: 2 cards in first row, 1 card in second (md:2 cols, sm:1 col) */}
+                <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {/* Card 1 */}
+                    <div className="bg-[#E4E9ED] rounded-3xl shadow-xl p-6 items-start">
+                        <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center">
+                            <Image src="/icons/excellence.svg" alt="Revolutionary Technology" width={28} height={28} />
+                        </div>
+                        <div className="mt-4">
+                            <h4 className="text-[#1F2D5C] text-xl font-semibold mb-3">Revolutionary Technology</h4>
+                            <p className="text-secondary text-base leading-relaxed">Groundbreaking invention that eliminates the expiration date on bottled water</p>
+                        </div>
+                    </div>
+
+                    {/* Card 2 */}
+                    <div className="bg-[#E4E9ED] rounded-3xl shadow-xl p-6 items-start">
+                        <div className="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center">
+                            <Image src="/icons/pure.svg" alt="Safe & Pure" width={28} height={28} />
+                        </div>
+                        <div className="mt-4">
+                            <h4 className="text-[#1F2D5C] text-xl font-semibold mb-3">Safe & Pure</h4>
+                            <p className="text-secondary text-base leading-relaxed">Ensuring lifelong freshness and health through advanced purification</p>
+                        </div>
+                    </div>
+
+                    {/* Card 3 */}
+                    <div className="bg-[#E4E9ED] rounded-3xl shadow-xl p-6 items-start md:col-span-1">
+                        <div className="w-12 h-12 rounded-2xl bg-indigo-50 flex items-center justify-center">
+                            <Image src="/icons/eco.svg" alt="Sustainable Solution" width={28} height={28} />
+                        </div>
+                        <div className="mt-4">
+                            <h4 className="text-[#1F2D5C] text-xl font-semibold mb-3">Sustainable Solution</h4>
+                            <p className="text-secondary text-base leading-relaxed">Eco-friendly approach to water preservation and distribution</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );
