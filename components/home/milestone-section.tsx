@@ -128,7 +128,7 @@ const MilestoneSection = () => {
                                     </div>
                                     {milestone.number < 5 && (
                                         <div className="ml-2 sm:ml-4 flex items-center">
-                                            <span className="text-primary text-2xl sm:text-4xl">➡️</span>
+                                            <Image src="/arrow.png" alt="Arrow" width={40} height={40} />
                                         </div>
                                     )}
                                 </div>

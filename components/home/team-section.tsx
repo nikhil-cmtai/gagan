@@ -86,23 +86,23 @@ const TeamSection = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 justify-items-center">
                         {teamMembers.slice(1).map((member, index) => (
                             <div key={index} className="flex flex-col items-center w-full px-6 sm:px-8 md:px-4">
-                                <div className="w-full max-w-xs mx-auto">
-                                    <div className="bg-white rounded-3xl p-4 shadow-xl relative">
+                                <div className="w-full max-w-[200px] mx-auto">
+                                    <div className="bg-white rounded-3xl p-2 shadow-xl relative">
                                         <div className="aspect-[3/4] overflow-hidden rounded-2xl">
                                             <Image
                                                 src={member.image}
                                                 alt={member.name}
-                                                width={500}
-                                                height={667}
+                                                width={200}
+                                                height={267}
                                                 className="w-full h-full object-cover"
                                                 priority
                                             />
                                         </div>
                                         
                                         {/* White info card at bottom */}
-                                        <div className="absolute -bottom-10 left-0 right-0 mx-8 bg-white rounded-xl p-4 shadow-lg">
-                                            <p className="text-center font-bold text-lg text-gray-800">{member.name}</p>
-                                            <p className="text-center text-gray-500 text-sm">We support over the world</p>
+                                        <div className="absolute -bottom-6 left-0 right-0 mx-3 bg-white rounded-xl p-2 shadow-lg">
+                                            <p className="text-center font-bold text-xs text-gray-800">{member.name}</p>
+                                            <p className="text-center text-gray-500 text-xs">We support over the world</p>
                                         </div>
                                     </div>
                                 </div>

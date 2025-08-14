@@ -7,7 +7,7 @@ const InfoSection = () => {
   return (
     <section className="py-21 relative z-10 -mt-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#f3f9ff] rounded-3xl shadow-xl p-6 sm:p-10 border-2 border-white relative">
+        <div className="bg-[#E4E9ED] rounded-3xl shadow-xl p-6 sm:p-10 border-2 border-white relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 xl:gap-32 items-center">
             {/* Left Column */}
             <div className="w-full max-w-sm lg:max-w-md mx-auto lg:mx-0 text-center lg:text-left relative z-20 mb-8 lg:mb-0">

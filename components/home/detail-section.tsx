@@ -7,7 +7,7 @@ const DetailSection = () => {
     return (
         <section className="py-18 relative z-10 -mt-2">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="bg-[#f3f9ff] rounded-3xl shadow-xl p-6 sm:p-10 border-2 border-white relative">
+                <div className="bg-[#E4E9ED] rounded-3xl shadow-xl p-6 sm:p-10 border-2 border-white relative">
                     <div className="grid grid-cols-1 md:grid-cols-5 md:gap-8 items-start">
 
                         {/* Right Column - Image (40%) */}

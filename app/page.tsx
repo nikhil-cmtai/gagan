@@ -7,6 +7,8 @@ import AdvantageSection from '@/components/home/advantage-section';
 import MilestoneSection from '@/components/home/milestone-section';
 import TeamSection from '@/components/home/team-section';
 import CTA from '@/components/home/cta-section';
+import TestimonialSection from '@/components/home/testimonial-section';
+import StatsSection from '@/components/home/stats-section';
 
 export default function Home() {
   return (
@@ -33,8 +35,14 @@ export default function Home() {
         {/* Milestone Section */}
         <MilestoneSection />
 
+        {/* Stats Section */}
+        <StatsSection />
+
         {/* Team Section */}
         <TeamSection />
+
+        {/* Testimonial Section */}
+        <TestimonialSection />
 
         {/* CTA Section */}
         <CTA />

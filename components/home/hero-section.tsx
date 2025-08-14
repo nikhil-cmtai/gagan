@@ -73,7 +73,7 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Full Width Wave Section - Moved higher up */}
+        {/* Full Width Wave Section - Fixed uniform border */}
         <div className="absolute -bottom-8 left-0 right-0 w-full z-25">
           <svg
             className="w-full h-[120px] sm:h-[140px]"
@@ -82,19 +82,21 @@ const HeroSection: React.FC = () => {
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
           >
-            {/* White border that follows the curve */}
+            {/* White border with uniform thickness */}
             <path
               d="M0,0 
             C240,250 480,350 720,350 
             C960,350 1200,250 1440,0"
               stroke="#fff"
-              strokeWidth="14"
+              strokeWidth="16"
               fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <path
-              d="M0,12 
+              d="M0,0 
             C240,250 480,350 720,350 
-            C960,350 1200,250 1440,12 
+            C960,350 1200,250 1440,0 
             L1440,500 L0,500 Z"
               fill="#D7E0E7"
               filter="drop-shadow(0px -5px 10px rgba(0, 84, 231, 0.1))"
