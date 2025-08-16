@@ -46,7 +46,7 @@ export default function InnovationSection() {
           {/* Right Image */}
           <div className="relative w-full max-w-[400px] lg:w-[550px] aspect-square lg:h-[550px] flex items-center justify-center mt-8 lg:mt-0">
             <div className="absolute inset-0 bg-gradient-to-br from-[#4284FF]/10 via-[#2ECC71]/10 to-transparent rounded-[40px] transform rotate-6 animate-pulse"></div>
-            <div className="absolute inset-4 bg-white rounded-[40px] shadow-lg backdrop-blur-xl">
+            <div className="absolute inset-4 bg-[#E4E9ED] rounded-[40px] shadow-lg backdrop-blur-xl">
               <div className="relative w-full h-full p-8 sm:p-12">
                 <Image 
                   src="/water-drop.png" 
