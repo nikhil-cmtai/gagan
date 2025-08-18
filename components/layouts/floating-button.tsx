@@ -75,7 +75,7 @@ export const FloatingButton = () => {
         {/* Main floating button */}
         <button 
           onClick={toggleMenu}
-          className="flex items-center justify-center w-14 h-14 rounded-full bg-blue-600 text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 focus:outline-none"
+          className="flex items-center justify-center w-14 h-14 rounded-full bg-primary text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 focus:outline-none"
         >
           {isOpen ? (
             <X size={24} strokeWidth={2} />
@@ -95,7 +95,7 @@ export const FloatingButton = () => {
       <div className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${showScrollTop ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10 pointer-events-none'}`}>
         <button
           onClick={scrollToTop}
-          className="flex items-center justify-center w-14 h-14 rounded-full bg-blue-600 text-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
+          className="flex items-center justify-center w-14 h-14 rounded-full bg-primary text-white shadow-lg hover:shadow-xl transition-all hover:scale-110"
         >
           <ArrowUp size={24} strokeWidth={2} />
         </button>

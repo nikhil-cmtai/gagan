@@ -69,7 +69,7 @@ export const BenefitsSection = () => {
                 </svg>
 
                 {/* Inner Circle with Lung Illustration */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white rounded-full shadow-[inset_4px_4px_12px_rgba(0,0,0,0.15),inset_-4px_-4px_12px_rgba(255,255,255,0.9),8px_8px_24px_rgba(0,0,0,0.2),-8px_-4px_24px_rgba(255,255,255,0.8)] flex items-center justify-center">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-30 md-w-48 md-h-48 h-30 md bg-white rounded-full shadow-[inset_4px_4px_12px_rgba(0,0,0,0.15),inset_-4px_-4px_12px_rgba(255,255,255,0.9),8px_8px_24px_rgba(0,0,0,0.2),-8px_-4px_24px_rgba(255,255,255,0.8)] flex items-center justify-center">
                   <div className="w-20 h-20">
                     {/* Lung Illustration */}
                     <Image src="/lungs.png" alt="Lung Illustration" width={150} height={150} />
@@ -79,7 +79,7 @@ export const BenefitsSection = () => {
                 {/* Icons around the ring for mobile - individual animations */}
                 <div className="absolute inset-0">
                   {/* Top Icon - Heart */}
-                  <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-full flex items-center justify-center animate-orbit-1">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-full flex items-center justify-center animate-orbit-1">
                     <Image src="/heart.png" alt="Heart Illustration" width={60} height={60} />
                   </div>
 
@@ -89,7 +89,7 @@ export const BenefitsSection = () => {
                   </div>
 
                   {/* Bottom Icon - Kidney */}
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-full flex items-center justify-center animate-orbit-3">
+                  <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-14 h-14 rounded-full flex items-center justify-center animate-orbit-3">
                     <Image src="/kidney.png" alt="Kidney Illustration" width={60} height={60} />
                   </div>
 
