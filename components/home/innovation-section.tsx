@@ -32,13 +32,13 @@ export default function InnovationSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6">
-              <button className="w-full sm:w-auto group bg-[#4284FF] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-medium hover:bg-[#2563EB] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 relative overflow-hidden">
+              <button className="w-full sm:w-auto group bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-medium transition-all duration-300 relative overflow-hidden">
                 <span className="relative z-10">Explore Technology</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#4284FF] to-[#2563EB] transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                <div className="absolute inset-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
               </button>
-              <button className="w-full sm:w-auto group text-[#4284FF] px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-medium border-2 border-[#4284FF] hover:bg-[#4284FF] hover:text-white transition-all duration-300 relative overflow-hidden">
+              <button className="w-full sm:w-auto group text-primary px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-medium border-2 border-primary transition-all duration-300 relative overflow-hidden">
                 <span className="relative z-10">Learn More</span>
-                <div className="absolute inset-0 bg-[#4284FF] transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                <div className="absolute inset-0 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
               </button>
             </div>
           </div>
