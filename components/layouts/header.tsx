@@ -39,7 +39,7 @@ export default function Header() {
             {/* Book Now Button */}
             <Link 
               href="/book-now"
-              className="relative flex items-center gap-2 overflow-hidden bg-[#4284FF] hover:bg-[#2563EB] transition-colors text-white px-6 py-2 rounded-full text-lg tracking-wide font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-[#4284FF] focus:ring-offset-2"
+              className="relative flex items-center gap-2 overflow-hidden bg-primary transition-colors text-white px-6 py-2 rounded-full text-lg tracking-wide font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-[#4284FF] focus:ring-offset-2"
             >
               <span className="relative z-10">Book Now</span>
               <ArrowRightIcon className="w-4 h-4 relative z-10" />
