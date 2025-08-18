@@ -35,7 +35,7 @@ export const BenefitsSection = () => {
         </div>
 
 
-        <h2 className="text-center text-3xl md:text-5xl text-primary font-bold mb-12">Health Benefits</h2>
+        <h2 className="text-center text-3xl md:text-5xl text-primary font-bold mb-12">Health <span className="relative z-10 bg-gradient-to-r from-[#4284FF] to-[#2ECC71] text-transparent bg-clip-text">Benefits</span></h2>
 
         <div className="max-w-7xl mx-auto mb-0 md:mb-42">
           {/* Mobile Layout - Circle at start, cards below in single row */}
@@ -68,10 +68,10 @@ export const BenefitsSection = () => {
                 </svg>
 
                 {/* Inner Circle with Lung Illustration */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full flex items-center justify-center">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white rounded-full shadow-[inset_4px_4px_12px_rgba(0,0,0,0.15),inset_-4px_-4px_12px_rgba(255,255,255,0.9),8px_8px_24px_rgba(0,0,0,0.2),-8px_-4px_24px_rgba(255,255,255,0.8)] flex items-center justify-center">
                   <div className="w-20 h-20">
                     {/* Lung Illustration */}
-                    <Image src="/lungs.png" alt="Lung Illustration" width={100} height={100} />
+                    <Image src="/lungs.png" alt="Lung Illustration" width={150} height={150} />
                   </div>
                 </div>
 
@@ -179,7 +179,7 @@ export const BenefitsSection = () => {
                 </svg>
 
                 {/* Inner Circle with Lung Illustration */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full flex items-center justify-center">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white rounded-full shadow-[inset_4px_4px_12px_rgba(0,0,0,0.15),inset_-4px_-4px_12px_rgba(255,255,255,0.9),8px_8px_24px_rgba(0,0,0,0.2),-8px_-4px_24px_rgba(255,255,255,0.8)] flex items-center justify-center">
                   <div className="w-32 h-32">
                     {/* Lung Illustration */}
                     <Image src="/lungs.png" alt="Lung Illustration" width={150} height={150} />

@@ -12,7 +12,7 @@ export default function AboutSection() {
             {/* Left Content - About Text */}
             <div className="md:w-4/5 p-8 md:p-12 lg:px-16">
               <h2 className="text-6xl text-primary mb-8">
-                About Us
+                About <span className="relative z-10 bg-gradient-to-r from-[#4284FF] to-[#2ECC71] text-transparent bg-clip-text">Us</span>
               </h2>
               
               <p className="text-secondary text-lg md:text-xl mb-6 leading-relaxed">

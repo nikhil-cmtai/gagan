@@ -49,8 +49,8 @@ export default function CTA() {
         
         <div className="text-center mb-6">
           <h2 className="text-3xl md:text-5xl font-bold mb-4 mt-6 md:mt-0">
-            <span className="text-gray-800">Take the </span>
-            <span className="text-blue-600">Next Step</span>
+            <span className="text-primary">Take the </span>
+            <span className="relative z-10 bg-gradient-to-r from-[#4284FF] to-[#2ECC71] text-transparent bg-clip-text">Next Step</span>
           </h2>
           <h3 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6">Towards Better Health</h3>
           

@@ -46,7 +46,7 @@ const DetailSection = () => {
                             <Image src="/icons/excellence.svg" alt="Revolutionary Technology" width={28} height={28} />
                         </div>
                         <div className="mt-4">
-                            <h4 className="text-[#1F2D5C] text-xl font-semibold mb-3">Revolutionary Technology</h4>
+                            <h4 className="text-primary text-xl font-semibold mb-3">Revolutionary Technology</h4>
                             <p className="text-secondary text-base leading-relaxed">Groundbreaking invention that eliminates the expiration date on bottled water</p>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ const DetailSection = () => {
                             <Image src="/icons/pure.svg" alt="Safe & Pure" width={28} height={28} />
                         </div>
                         <div className="mt-4">
-                            <h4 className="text-[#1F2D5C] text-xl font-semibold mb-3">Safe & Pure</h4>
+                            <h4 className="text-primary text-xl font-semibold mb-3">Safe & Pure</h4>
                             <p className="text-secondary text-base leading-relaxed">Ensuring lifelong freshness and health through advanced purification</p>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ const DetailSection = () => {
                             <Image src="/icons/eco.svg" alt="Sustainable Solution" width={28} height={28} />
                         </div>
                         <div className="mt-4">
-                            <h4 className="text-[#1F2D5C] text-xl font-semibold mb-3">Sustainable Solution</h4>
+                            <h4 className="text-primary text-xl font-semibold mb-3">Sustainable Solution</h4>
                             <p className="text-secondary text-base leading-relaxed">Eco-friendly approach to water preservation and distribution</p>
                         </div>
                     </div>

@@ -29,7 +29,7 @@ const TeamSection = () => {
     return (
         <div className="py-20 px-4 bg-white">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-center text-4xl md:text-6xl text-primary font-bold mb-20">Meet Our Expert Team</h2>
+                <h2 className="text-center text-4xl md:text-6xl text-primary font-bold mb-20">Meet Our <span className="relative z-10 bg-gradient-to-r from-[#4284FF] to-[#2ECC71] text-transparent bg-clip-text">Expert</span> Team</h2>
                 
                 {/* Founder Section - Top row with image left, description right */}
                 <div className="flex flex-col md:flex-row items-center justify-center gap-12 mb-20">

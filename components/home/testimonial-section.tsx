@@ -81,7 +81,7 @@ const TestimonialSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold text-primary mb-4">
-            What Our Customers Say
+            What Our <span className="relative z-10 bg-gradient-to-r from-[#4284FF] to-[#2ECC71] text-transparent bg-clip-text">Customers</span> Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Don&apos;t just take our word for it. Here&apos;s what our valued customers have to say about their experience with Ever Fresh.

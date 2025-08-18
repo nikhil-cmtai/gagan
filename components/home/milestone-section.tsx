@@ -71,7 +71,9 @@ const MilestoneSection = () => {
             <div className="max-w-7xl mx-auto relative">
                 <div className="flex items-center mb-12">
                     <div className="text-5xl mr-4">🏆</div>
-                    <h2 className="text-3xl md:text-5xl font-bold">Our Milestone</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold">Our 
+                        <span className="relative z-10 bg-gradient-to-r from-[#4284FF] to-[#2ECC71] text-transparent bg-clip-text"> Milestone</span>
+                    </h2>
                 </div>
 
                 {/* Desktop Version - Hidden on mobile */}
