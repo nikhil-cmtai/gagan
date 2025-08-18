@@ -38,11 +38,21 @@ export default function BookNow() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    let newValue = value;
+    // For quantity, only allow numbers and prevent leading zeros
+    if (name === 'quantity') {
+      // Remove non-digit characters
+      newValue = newValue.replace(/\D/g, '');
+      // Prevent empty string, default to '1'
+      if (newValue === '') newValue = '1';
+      // Prevent leading zeros
+      newValue = String(Number(newValue));
+    }
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: newValue
     }));
-    
+
     // Clear errors when typing
     if (errors[name as keyof typeof errors]) {
       setErrors(prev => ({
@@ -55,7 +65,7 @@ export default function BookNow() {
   const validateForm = () => {
     let valid = true;
     const newErrors = { ...errors };
-    
+
     // First Name validation
     if (!formData.firstName.trim()) {
       newErrors.firstName = 'First name is required';
@@ -63,7 +73,7 @@ export default function BookNow() {
     } else {
       newErrors.firstName = '';
     }
-    
+
     // Last Name validation
     if (!formData.lastName.trim()) {
       newErrors.lastName = 'Last name is required';
@@ -71,7 +81,7 @@ export default function BookNow() {
     } else {
       newErrors.lastName = '';
     }
-    
+
     // Email validation
     if (!formData.email) {
       newErrors.email = 'Email is required';
@@ -82,7 +92,7 @@ export default function BookNow() {
     } else {
       newErrors.email = '';
     }
-    
+
     // Phone validation
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
@@ -93,7 +103,7 @@ export default function BookNow() {
     } else {
       newErrors.phone = '';
     }
-    
+
     // Address validation
     if (!formData.address.trim()) {
       newErrors.address = 'Address is required';
@@ -101,7 +111,7 @@ export default function BookNow() {
     } else {
       newErrors.address = '';
     }
-    
+
     // City validation
     if (!formData.city.trim()) {
       newErrors.city = 'City is required';
@@ -109,7 +119,7 @@ export default function BookNow() {
     } else {
       newErrors.city = '';
     }
-    
+
     // State validation
     if (!formData.state.trim()) {
       newErrors.state = 'State is required';
@@ -117,7 +127,7 @@ export default function BookNow() {
     } else {
       newErrors.state = '';
     }
-    
+
     // Zip Code validation
     if (!formData.zipCode.trim()) {
       newErrors.zipCode = 'Zip code is required';
@@ -128,15 +138,19 @@ export default function BookNow() {
     } else {
       newErrors.zipCode = '';
     }
-    
+
     // Quantity validation
-    if (!formData.quantity || parseInt(formData.quantity) < 1) {
-      newErrors.quantity = 'Please select a valid quantity';
+    const quantityNum = parseInt(formData.quantity, 10);
+    if (!formData.quantity || isNaN(quantityNum) || quantityNum < 1) {
+      newErrors.quantity = 'Please enter a valid quantity (minimum 1)';
+      valid = false;
+    } else if (quantityNum > 10000) {
+      newErrors.quantity = 'Maximum 10000 units allowed';
       valid = false;
     } else {
       newErrors.quantity = '';
     }
-    
+
     // Delivery Date validation
     if (!formData.deliveryDate) {
       newErrors.deliveryDate = 'Delivery date is required';
@@ -145,7 +159,7 @@ export default function BookNow() {
       const selectedDate = new Date(formData.deliveryDate);
       const today = new Date();
       today.setHours(0, 0, 0, 0);
-      
+
       if (selectedDate < today) {
         newErrors.deliveryDate = 'Delivery date cannot be in the past';
         valid = false;
@@ -153,23 +167,23 @@ export default function BookNow() {
         newErrors.deliveryDate = '';
       }
     }
-    
+
     setErrors(newErrors);
     return valid;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
-    
+
     setIsLoading(true);
     setErrors({ ...errors, general: '' });
-    
+
     // Simulate API call
     setTimeout(() => {
       setIsLoading(false);
-      
+
       // Show success message and redirect
       alert('Booking submitted successfully! We will contact you soon.');
       router.push('/');
@@ -195,13 +209,13 @@ export default function BookNow() {
                   alt="Empire Blue Logo"
                   width={140}
                   height={40}
-                  className="h-24 w-auto"
+                  className="h-20 w-auto"
                 />
               </div>
               <h1 className="text-2xl sm:text-3xl font-bold text-center">Book Your Order</h1>
               <p className="text-center mt-2 opacity-90">Get your premium healthy water delivered to your doorstep</p>
             </div>
-            
+
             {/* Form */}
             <div className="p-6 sm:p-8">
               {errors.general && (
@@ -209,7 +223,7 @@ export default function BookNow() {
                   {errors.general}
                 </div>
               )}
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Personal Information */}
                 <div>
@@ -233,7 +247,7 @@ export default function BookNow() {
                         <p className="mt-1 text-sm text-red-600">{errors.firstName}</p>
                       )}
                     </div>
-                    
+
                     {/* Last Name */}
                     <div>
                       <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
@@ -277,7 +291,7 @@ export default function BookNow() {
                         <p className="mt-1 text-sm text-red-600">{errors.email}</p>
                       )}
                     </div>
-                    
+
                     {/* Phone */}
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
@@ -321,7 +335,7 @@ export default function BookNow() {
                         <p className="mt-1 text-sm text-red-600">{errors.address}</p>
                       )}
                     </div>
-                    
+
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       {/* City */}
                       <div>
@@ -341,7 +355,7 @@ export default function BookNow() {
                           <p className="mt-1 text-sm text-red-600">{errors.city}</p>
                         )}
                       </div>
-                      
+
                       {/* State */}
                       <div>
                         <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-1">
@@ -360,7 +374,7 @@ export default function BookNow() {
                           <p className="mt-1 text-sm text-red-600">{errors.state}</p>
                         )}
                       </div>
-                      
+
                       {/* Zip Code */}
                       <div>
                         <label htmlFor="zipCode" className="block text-sm font-medium text-gray-700 mb-1">
@@ -392,29 +406,25 @@ export default function BookNow() {
                       <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-1">
                         Quantity *
                       </label>
-                      <select
+                      <input
                         id="quantity"
                         name="quantity"
+                        type="number"
+                        min={1}
+                        max={10000}
+                        step={1}
                         value={formData.quantity}
                         onChange={handleChange}
                         className={`block w-full px-3 py-3 border ${errors.quantity ? 'border-red-300' : 'border-gray-300'} rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary`}
-                      >
-                        <option value="1">1 Unit</option>
-                        <option value="2">2 Units</option>
-                        <option value="3">3 Units</option>
-                        <option value="4">4 Units</option>
-                        <option value="5">5 Units</option>
-                        <option value="6">6 Units</option>
-                        <option value="7">7 Units</option>
-                        <option value="8">8 Units</option>
-                        <option value="9">9 Units</option>
-                        <option value="10">10 Units</option>
-                      </select>
+                        placeholder="Enter number of units"
+                        inputMode="numeric"
+                        pattern="[0-9]*"
+                      />
                       {errors.quantity && (
                         <p className="mt-1 text-sm text-red-600">{errors.quantity}</p>
                       )}
                     </div>
-                    
+
                     {/* Delivery Date */}
                     <div>
                       <label htmlFor="deliveryDate" className="block text-sm font-medium text-gray-700 mb-1">
@@ -433,7 +443,7 @@ export default function BookNow() {
                       )}
                     </div>
                   </div>
-                  
+
                   {/* Delivery Time */}
                   <div className="mt-4">
                     <label htmlFor="deliveryTime" className="block text-sm font-medium text-gray-700 mb-1">
@@ -452,7 +462,7 @@ export default function BookNow() {
                       <option value="night">Night (6 PM - 9 PM)</option>
                     </select>
                   </div>
-                  
+
                   {/* Special Instructions */}
                   <div className="mt-4">
                     <label htmlFor="specialInstructions" className="block text-sm font-medium text-gray-700 mb-1">
@@ -498,7 +508,7 @@ export default function BookNow() {
                     </label>
                   </div>
                 </div>
-                
+
                 {/* Submit Button */}
                 <div>
                   <button
@@ -532,7 +542,7 @@ export default function BookNow() {
           <div className="bg-white rounded-3xl shadow-xl border-2 border-white overflow-hidden">
             <div className="p-6 sm:p-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-6">Order Summary</h2>
-              
+
               {/* Product Info */}
               <div className="flex items-center space-x-4 mb-6">
                 <div className="relative w-20 h-20">
@@ -549,7 +559,7 @@ export default function BookNow() {
                   <p className="text-sm text-gray-500">1 Unit = 20L</p>
                 </div>
               </div>
-              
+
               {/* Order Details */}
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between">
@@ -570,7 +580,7 @@ export default function BookNow() {
                   <span className="text-primary">₹{calculateTotal() + 50}</span>
                 </div>
               </div>
-              
+
               {/* Features */}
               <div className="bg-blue-50 rounded-xl p-4 mb-6">
                 <h4 className="font-semibold text-gray-800 mb-3 text-2xl">What you get:</h4>
@@ -601,11 +611,11 @@ export default function BookNow() {
                   </li>
                 </ul>
               </div>
-              
+
               {/* Contact Info */}
               <div className="text-center">
                 <p className="text-sm text-gray-600 mb-2">Need help? Contact us:</p>
-                <p className="text-primary font-medium">+91 98765 43210</p>
+                <p className="text-primary font-medium">+91 8867268719</p>
                 <p className="text-sm text-gray-500">support@empireblue.com</p>
               </div>
             </div>

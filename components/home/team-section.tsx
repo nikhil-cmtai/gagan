@@ -10,7 +10,7 @@ const teamMembers = [
     },
     {
         name: "Sandhya Mahalwanshi",
-        position: "Director",
+        position: "Managing Director",
         image: "/images/sandhya.jpeg"
     },
     {
@@ -36,7 +36,7 @@ const TeamSection = () => {
                     {/* Founder Image - Left side */}
                     <div className="w-full md:w-1/3 flex justify-center px-6 sm:px-10 md:px-0">
                         <div className="w-full max-w-sm">
-                            <div className="bg-white rounded-3xl p-4 shadow-xl mx-auto relative">
+                            <div className="bg-white rounded-3xl p-2 shadow-xl mx-auto relative">
                                 <div className="aspect-[3/4] overflow-hidden rounded-2xl">
                                     <Image
                                         src={teamMembers[0].image}
@@ -50,8 +50,8 @@ const TeamSection = () => {
                                 
                                 {/* White info card at bottom */}
                                 <div className="absolute -bottom-10 left-0 right-0 mx-8 bg-white rounded-xl p-4 shadow-lg">
-                                    <p className="text-center font-bold text-xl text-gray-800">{teamMembers[0].name}</p>
-                                    <p className="text-center text-gray-500 text-sm">We support over the world</p>
+                                    <p className="text-center font-bold text-xl text-primary">{teamMembers[0].name}</p>
+                                    <p className="text-center text-gray-500 text-sm">{teamMembers[0].position}</p>
                                 </div>
                             </div>
                         </div>
@@ -101,8 +101,8 @@ const TeamSection = () => {
                                         
                                         {/* White info card at bottom */}
                                         <div className="absolute -bottom-6 left-0 right-0 mx-3 bg-white rounded-xl p-2 shadow-lg">
-                                            <p className="text-center font-bold text-xs text-gray-800">{member.name}</p>
-                                            <p className="text-center text-gray-500 text-xs">We support over the world</p>
+                                            <p className="text-center font-bold text-xs text-primary">{member.name}</p>
+                                            <p className="text-center text-gray-500 text-xs">{member.position}</p>
                                         </div>
                                     </div>
                                 </div>

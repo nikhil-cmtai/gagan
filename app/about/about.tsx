@@ -3,34 +3,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import TeamSection from '@/components/home/team-section';
 
 export default function About() {
-  const teamMembers = [
-    {
-      name: 'Dr. Rajesh Kumar',
-      role: 'Founder & CEO',
-      image: '/team/founder.jpg',
-      bio: 'With over 20 years of experience in water purification technology, Dr. Kumar founded Empire Blue with a vision to revolutionize water storage and consumption.'
-    },
-    {
-      name: 'Dr. Priya Sharma',
-      role: 'Chief Scientific Officer',
-      image: '/team/scientist.jpg',
-      bio: 'Leading our R&D team, Dr. Sharma has pioneered our patented non-expiry formula that keeps water fresh indefinitely.'
-    },
-    {
-      name: 'Amit Patel',
-      role: 'Head of Operations',
-      image: '/team/operations.jpg',
-      bio: 'Amit ensures our production facilities maintain the highest standards of quality and efficiency in delivering our revolutionary water products.'
-    },
-    {
-      name: 'Neha Gupta',
-      role: 'Marketing Director',
-      image: '/team/marketing.jpg',
-      bio: 'Neha leads our efforts to spread awareness about water safety and the benefits of our non-expiry water technology.'
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-[#E6F3FF]">
@@ -231,40 +206,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-[#f3f9ff] rounded-3xl shadow-lg border border-white overflow-hidden group">
-                <div className="h-64 relative">
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                    onError={(e) => {
-                      // Fallback for missing image
-                      e.currentTarget.style.display = 'none';
-                      const parent = e.currentTarget.parentElement;
-                      if (parent) {
-                        parent.style.backgroundColor = '#4284FF';
-                        parent.style.display = 'flex';
-                        parent.style.alignItems = 'center';
-                        parent.style.justifyContent = 'center';
-                        const text = document.createElement('div');
-                        text.innerHTML = `<div class="text-white text-4xl font-bold">${member.name.split(' ').map(n => n[0]).join('')}</div>`;
-                        parent.appendChild(text);
-                      }
-                    }}
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-1">{member.name}</h3>
-                  <p className="text-primary/70 mb-4">{member.role}</p>
-                  <p className="text-secondary text-sm">{member.bio}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TeamSection />
 
           <div className="mt-16 text-center">
             <Link 

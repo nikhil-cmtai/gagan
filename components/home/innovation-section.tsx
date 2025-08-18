@@ -16,7 +16,7 @@ export default function InnovationSection() {
               <span className="text-[#4284FF] text-sm font-medium">Water Innovation</span>
             </div>
             
-            <h2 className="text-[#1D1D42] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 sm:mb-8">
+            <h2 className="text-primary text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 sm:mb-8">
               Revolutionizing
               <span className="relative mx-2 sm:mx-3">
                 <span className="relative z-10 bg-gradient-to-r from-[#4284FF] to-[#2ECC71] text-transparent bg-clip-text">Water</span>

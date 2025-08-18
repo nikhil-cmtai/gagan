@@ -9,8 +9,7 @@ const milestones = [
         subtitle: "Project Kickoff",
         details: [
             "Launch of Royal Fresh Minerals, our base segment brand.",
-            "Introducing the world's first non-expiry water bottle.",
-            "Each unit will be priced at ₹10 for accessible hydration."
+            "Introducing the world's first non-expiry water bottle."
         ],
         position: "bottom",
         number: 1
@@ -21,8 +20,7 @@ const milestones = [
         title: "Home Care",
         subtitle: "Product Expansion",
         details: [
-            "Launch of Colin, Dish Wash, Toilet Cleaner, and Floor Cleaner.",
-            "Pricing for each product will be set after market validation."
+            "Launch of Colin, Dish Wash, Toilet Cleaner, and Floor Cleaner."
         ],
         position: "top",
         number: 2
@@ -33,8 +31,7 @@ const milestones = [
         title: "Vehicle Care",
         subtitle: "Segment Launch",
         details: [
-            "Introduction of DM Water (battery), Coolant, and DEF Water.",
-            "Each product will be priced individually after market research."
+            "Introduction of DM Water (battery), Coolant, and DEF Water."
         ],
         position: "bottom",
         number: 3
@@ -46,7 +43,7 @@ const milestones = [
         subtitle: "Premium Segment",
         details: [
             "Launch of our premium brand with enhanced minerals and benefits.",
-            "Premium glass bottle packaging, professional branding, ₹5,000 per unit."
+            "Premium glass bottle packaging, professional branding."
         ],
         position: "top",
         number: 4
@@ -58,7 +55,7 @@ const milestones = [
         subtitle: "Major Achievement",
         details: [
             "Launch of our highest premium segment brand with top enhancements.",
-            "Super premium glass bottle, elite branding, priced at ₹25,000 per unit."
+            "Super premium glass bottle, elite branding."
         ],
         position: "bottom",
         number: 5

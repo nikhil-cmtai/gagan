@@ -212,8 +212,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold mb-1">Call Us</h4>
-                    <p className="text-white/80 text-sm sm:text-base">+91 98765 43210</p>
-                    <p className="text-white/80 text-sm sm:text-base">+91 87654 32109</p>
+                    <p className="text-white/80 text-sm sm:text-base">+91 8867268719</p>
+                    <p className="text-white/80 text-sm sm:text-base">+91 8319439382</p>
                   </div>
                 </div>
                 
