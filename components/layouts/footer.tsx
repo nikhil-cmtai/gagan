@@ -12,9 +12,9 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <Link href="/" className="block">
-              <div className="relative w-[200px] h-[50px]">
+              <div className="relative w-[200px] h-[60px]">
                 <Image 
-                  src="/logo.png" 
+                  src="/logo1.png" 
                   alt="Empire Blue" 
                   fill
                   className="object-contain"

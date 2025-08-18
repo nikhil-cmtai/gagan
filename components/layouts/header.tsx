@@ -20,7 +20,7 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex flex-col items-start group">
-            <Image src="/logo.png" alt="Imperial Water" width={200} height={45} />
+            <Image src="/logo1.png" alt="Imperial Water" width={200} height={45} />
           </Link>
 
           {/* Desktop Navigation */}
