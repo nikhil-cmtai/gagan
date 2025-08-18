@@ -172,7 +172,7 @@ export default function BookNow() {
     return valid;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!validateForm()) return;
@@ -180,14 +180,91 @@ export default function BookNow() {
     setIsLoading(true);
     setErrors({ ...errors, general: '' });
 
-    // Simulate API call
-    setTimeout(() => {
+    // Email template for admin
+    const adminHtml = `
+      <h2>New Order Booking Received</h2>
+      <p><b>Name:</b> ${formData.firstName} ${formData.lastName}</p>
+      <p><b>Email:</b> ${formData.email}</p>
+      <p><b>Phone:</b> ${formData.phone}</p>
+      <p><b>Address:</b> ${formData.address}, ${formData.city}, ${formData.state} - ${formData.zipCode}</p>
+      <p><b>Quantity:</b> ${formData.quantity}</p>
+      <p><b>Delivery Date:</b> ${formData.deliveryDate}</p>
+      <p><b>Total Amount:</b> ₹${parseInt(formData.quantity) * 299}</p>
+      <hr/>
+      <p style="color:#0a6cff;font-weight:bold;">Empire Blue - Premium Healthy Water</p>
+    `;
+
+    // Email template for user
+    const userHtml = `
+      <h2>Thank You for Your Booking!</h2>
+      <p>Dear ${formData.firstName},</p>
+      <p>We have received your order for <b>${formData.quantity} unit(s)</b> of Empire Blue water.</p>
+      <p>Your order will be delivered to:</p>
+      <p>${formData.address}, ${formData.city}, ${formData.state} - ${formData.zipCode}</p>
+      <p><b>Expected Delivery Date:</b> ${formData.deliveryDate}</p>
+      <p><b>Total Amount:</b> ₹${parseInt(formData.quantity) * 299}</p>
+      <br/>
+      <p>We will contact you soon for confirmation. For any queries, reply to this email.</p>
+      <hr/>
+      <p style="color:#0a6cff;font-weight:bold;">Empire Blue - Premium Healthy Water</p>
+    `;
+
+    try {
+      // Send email to admin
+      const adminMail = fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          to: 'locationtracker21@gmail.com',
+          subject: `New Order Booking from ${formData.firstName} ${formData.lastName}`,
+          text: `
+            Name: ${formData.firstName} ${formData.lastName}
+            Email: ${formData.email}
+            Phone: ${formData.phone}
+            Address: ${formData.address}, ${formData.city}, ${formData.state} - ${formData.zipCode}
+            Quantity: ${formData.quantity}
+            Delivery Date: ${formData.deliveryDate}
+            Total Amount: ₹${parseInt(formData.quantity) * 299}
+          `,
+          html: adminHtml,
+        }),
+      });
+
+      // Send confirmation email to user
+      const userMail = fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          to: formData.email,
+          subject: 'Your Empire Blue Order Booking Confirmation',
+          text: `
+            Dear ${formData.firstName},
+            Thank you for booking your order with Empire Blue.
+            Quantity: ${formData.quantity}
+            Delivery Date: ${formData.deliveryDate}
+            Total Amount: ₹${parseInt(formData.quantity) * 299}
+            We will contact you soon for confirmation.
+          `,
+          html: userHtml,
+        }),
+      });
+
+      const [adminRes, userRes] = await Promise.all([adminMail, userMail]);
+      const adminData = await adminRes.json();
+      const userData = await userRes.json();
+
       setIsLoading(false);
 
-      // Show success message and redirect
-      alert('Booking submitted successfully! We will contact you soon.');
-      router.push('/');
-    }, 2000);
+      if (adminRes.ok && userRes.ok) {
+        alert('Booking submitted successfully! We will contact you soon.');
+        router.push('/');
+      } else {
+        setErrors({ ...errors, general: adminData.error || userData.error || 'Failed to send booking email.' });
+      }
+    } catch (err) {
+      setIsLoading(false);
+      setErrors({ ...errors, general: 'Failed to send booking email.' });
+    }
   };
 
   const calculateTotal = () => {

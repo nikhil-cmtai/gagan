@@ -5,7 +5,7 @@ const milestones = [
     {
         year: '2026',
         yearImage: '/2026.png',
-        title: "Ever Fresh",
+        title: "Newtro-X",
         subtitle: "Project Kickoff",
         details: [
             "Launch of Royal Fresh Minerals, our base segment brand.",
@@ -39,7 +39,7 @@ const milestones = [
     {
         year: '2029',
         yearImage: '/2029.png',
-        title: "Ultra Pure",
+        title: "Black Plum",
         subtitle: "Premium Segment",
         details: [
             "Launch of our premium brand with enhanced minerals and benefits.",
@@ -51,7 +51,7 @@ const milestones = [
     {
         year: '2030',
         yearImage: '/2030.png',
-        title: "Java",
+        title: "Java-X",
         subtitle: "Major Achievement",
         details: [
             "Launch of our highest premium segment brand with top enhancements.",

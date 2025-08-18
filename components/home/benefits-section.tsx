@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 
-
 export const BenefitsSection = () => {
   return (
     <div className="max-w-full mx-auto py-12 px-8 relative mt-12">
@@ -34,7 +33,6 @@ export const BenefitsSection = () => {
           </svg>
         </div>
 
-
         <h2 className="text-center text-3xl md:text-5xl text-primary font-bold mb-12">Health <span className="relative z-10 bg-gradient-to-r from-[#4284FF] to-[#2ECC71] text-transparent bg-clip-text">Benefits</span></h2>
 
         <div className="max-w-7xl mx-auto mb-0 md:mb-42">
@@ -51,9 +49,12 @@ export const BenefitsSection = () => {
                       <stop offset="0%" style={{ stopColor: '#f8fafc', stopOpacity: 1 }} />
                       <stop offset="100%" style={{ stopColor: '#e2e8f0', stopOpacity: 1 }} />
                     </linearGradient>
-                    <filter id="ringShadowMobile">
-                      <feDropShadow dx="0" dy="12" stdDeviation="12" floodColor="rgba(0,0,0,0.15)" />
-                      <feDropShadow dx="0" dy="6" stdDeviation="6" floodColor="rgba(0,0,0,0.08)" />
+                    {/* Asymmetric shadow for mobile outer ring */}
+                    <filter id="ringShadowMobile" x="-30%" y="-10%" width="160%" height="160%">
+                      {/* Top and left: minimal shadow */}
+                      <feDropShadow dx="-2" dy="-2" stdDeviation="2" floodColor="rgba(0,0,0,0.07)" />
+                      {/* Right and bottom: strong shadow */}
+                      <feDropShadow dx="12" dy="18" stdDeviation="16" floodColor="rgba(0,0,0,0.22)" />
                     </filter>
                   </defs>
 
@@ -162,9 +163,12 @@ export const BenefitsSection = () => {
                       <stop offset="0%" style={{ stopColor: '#f8fafc', stopOpacity: 1 }} />
                       <stop offset="100%" style={{ stopColor: '#e2e8f0', stopOpacity: 1 }} />
                     </linearGradient>
-                    <filter id="ringShadow">
-                      <feDropShadow dx="0" dy="12" stdDeviation="12" floodColor="rgba(0,0,0,0.15)" />
-                      <feDropShadow dx="0" dy="6" stdDeviation="6" floodColor="rgba(0,0,0,0.08)" />
+                    {/* Asymmetric shadow for desktop outer ring */}
+                    <filter id="ringShadow" x="-20%" y="-10%" width="160%" height="180%">
+                      {/* Top and left: minimal shadow */}
+                      <feDropShadow dx="-3" dy="-3" stdDeviation="3" floodColor="rgba(0,0,0,0.0)" />
+                      {/* Right and bottom: strong shadow */}
+                      <feDropShadow dx="24" dy="32" stdDeviation="24" floodColor="rgba(0,0,0,0.14)" />
                     </filter>
                   </defs>
 

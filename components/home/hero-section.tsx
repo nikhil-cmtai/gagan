@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
         <div className="max-w-6xl mx-auto relative">
           {/* Main White Card */}
           <div
-            className="rounded-[20px] sm:rounded-[40px] relative overflow-hidden z-5 shadow-[0_0_30px_0_rgba(0,84,231,0.15)] mt-2 sm:mt-6 lg:mt-8"
+            className="rounded-[20px] sm:rounded-[40px] relative overflow-hidden z-5 shadow-[2px_3px_40px_8px_rgba(0,84,231,0.18),-1px_-1px_6px_0_rgba(0,84,231,0.06)] mt-1 sm:mt-3 lg:mt-4 ml-0"
           >
 
             {/* Hero Content */}
@@ -46,7 +46,7 @@ const HeroSection: React.FC = () => {
 
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-[''] font-bold mb-2 sm:mb-3 lg:mb-4 leading-tight">
                   <span className="text-secondary">World&apos;s</span>{' '}
-                  <span className="bg-gradient-to-r from-[#0054E7] via-[#3378FF] to-[#0066FF] text-transparent bg-clip-text">First Non-Expiry</span>{' '}
+                  <span className="bg-primary text-transparent bg-clip-text">First Non-Expiry</span>{' '}
                   <span className="text-secondary">Water</span>
                 </h1>
 

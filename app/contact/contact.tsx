@@ -13,35 +13,85 @@ export default function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [status, setStatus] = useState('');
+  const [errors, setErrors] = useState<{ name?: string; email?: string }>({});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+  // Simple validation for name and email
+  const validate = (data: typeof formData) => {
+    const newErrors: { name?: string; email?: string } = {};
+    if (!data.name.trim()) {
+      newErrors.name = 'Name is required.';
+    }
+    if (!data.email.trim()) {
+      newErrors.email = 'Email is required.';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      newErrors.email = 'Invalid email address.';
+    }
+    return newErrors;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    // Validate on change for name and email
+    if (name === 'name' || name === 'email') {
+      setErrors(prev => ({ ...prev, ...validate({ ...formData, [name]: value }) }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setStatus('');
+    const validationErrors = validate(formData);
+    setErrors(validationErrors);
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      setStatus('Please fill all fields.');
+      return;
+    }
+    if (validationErrors.name || validationErrors.email) {
+      setStatus(validationErrors.name || validationErrors.email || 'Please fix the errors.');
+      return;
+    }
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitSuccess(true);
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
+    try {
+      // Send mail to admin and user
+      const adminMail = fetch('/api/send-mail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          to: 'locationtracker21@gmail.com',
+          subject: formData.subject,
+          text: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\nMessage: ${formData.message}`,
+          html: `<b>Name:</b> ${formData.name}<br/><b>Email:</b> ${formData.email}<br/><b>Phone:</b> ${formData.phone}<br/><b>Subject:</b> ${formData.subject}<br/><b>Message:</b><br/>${formData.message}`,
+        }),
       });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitSuccess(false);
-      }, 5000);
-    }, 1500);
+      const userMail = fetch('/api/send-mail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          to: formData.email,
+          subject: 'Thank you for contacting us!',
+          text: `Dear ${formData.name},\nThank you for reaching out to Location Track. We have received your message and will get back to you soon.`,
+          html: `<b>Dear ${formData.name},</b><br/>Thank you for reaching out to Location Track. We have received your message and will get back to you soon.`,
+        }),
+      });
+      const [adminRes, userRes] = await Promise.all([adminMail, userMail]);
+      const adminData = await adminRes.json();
+      const userData = await userRes.json();
+      if (adminRes.ok && userRes.ok) {
+        setStatus('Message sent successfully!');
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+        setSubmitSuccess(true);
+      } else {
+        setStatus(adminData.error || userData.error || 'Failed to send message.');
+      }
+    } catch (err) {
+      console.error('Error sending message:', err);
+      setStatus('Failed to send message.');
+    }
+    setIsSubmitting(false);
   };
 
   return (
@@ -71,6 +121,15 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {status && (
+                    <div
+                      className={`text-center text-sm py-2 rounded-xl ${
+                        status.includes('success') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+                      }`}
+                    >
+                      {status}
+                    </div>
+                  )}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
@@ -81,9 +140,14 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                        className={`w-full px-4 py-3 rounded-xl border ${
+                          errors.name ? 'border-red-500' : 'border-gray-300'
+                        } focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary`}
                         placeholder="Enter your full name"
                       />
+                      {errors.name && (
+                        <p className="text-xs text-red-600 mt-1">{errors.name}</p>
+                      )}
                     </div>
                     
                     {/* Email */}
@@ -96,9 +160,14 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                        className={`w-full px-4 py-3 rounded-xl border ${
+                          errors.email ? 'border-red-500' : 'border-gray-300'
+                        } focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary`}
                         placeholder="Enter your email"
                       />
+                      {errors.email && (
+                        <p className="text-xs text-red-600 mt-1">{errors.email}</p>
+                      )}
                     </div>
                   </div>
                   
