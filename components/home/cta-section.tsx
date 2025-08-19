@@ -54,9 +54,8 @@ export default function CTA() {
           </h2>
           <h3 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6">Towards Better Health</h3>
           
-          <p className="text-gray-500 max-w-2xl mx-auto mb-10">
-            Ready to experience our exceptional care? Schedule an appointment today and 
-            discover how we can help you live your healthiest life.
+          <p className="text-gray-500 text-base max-w-2xl mx-auto mb-10">
+          Empire Blue Operates in the growing health and wellness market  health conscious individuals seeking natural solutions for disease prevention and immune support with increasing awareness of health risks like cancer and heart disease demand for mineral based supplements in mineral water Ready to experience our exceptional innovative water? book your first can  today and discover how we can help you live your healthiest life.
           </p>
           
           <Link href="/book-now">

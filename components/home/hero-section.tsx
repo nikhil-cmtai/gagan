@@ -33,7 +33,7 @@ const HeroSection: React.FC = () => {
               {/* Right Content - 60% */}
               <div className="flex-1 w-full lg:max-w-[60%] z-10 mb-4 lg:mb-0 order-2">
                 {/* Logo positioned better */}
-                <div className="flex justify-center lg:justify-start mb-3 sm:mb-4 lg:mb-6">
+                <div className="flex justify-center lg:justify-start mb-3 sm:mb-2 lg:mb-2">
                   <div className="relative w-[240px] sm:w-[280px] lg:w-[320px] h-[60px] sm:h-[70px] lg:h-[90px]">
                     <Image
                       src="/image.png"
