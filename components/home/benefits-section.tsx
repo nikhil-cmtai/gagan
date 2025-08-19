@@ -221,7 +221,7 @@ export const BenefitsSection = () => {
 
                   {/* Bottom Center Icon - Checkmark (Anthocyanin) - positioned exactly at stroke end 50%,70% */}
                   <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 translate-y-0 w-20 h-20 rounded-full flex items-center justify-center animate-orbit-5">  
-                    <Image src="/right.png" alt="Checkmark Illustration" width={80} height={80} />
+                    <Image src="/brain.png" alt="Checkmark Illustration" width={80} height={80} />
                   </div>
 
                   {/* Connecting Lines - evenly spaced around circle */}
