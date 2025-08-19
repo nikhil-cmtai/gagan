@@ -106,6 +106,7 @@ export const BenefitsSection = () => {
               {/* Anthoxanthin */}
               <div className="w-full rounded-md p-4">
                 <h3 className="font-bold text-primary text-base mb-2">Anthoxanthin</h3>
+                <div className="text-[13px] text-[#4284FF] font-semibold mb-1">Healthy Bone</div>
                 <p className="text-xs text-black leading-relaxed">
                   Antioxidant properties beneficial for cancer treatment and heart health.
                   Improves blood flow and reduces oxidative stress.
@@ -115,6 +116,7 @@ export const BenefitsSection = () => {
               {/* Chlorophyll */}
               <div className="w-full rounded-md p-4">
                 <h3 className="font-bold text-primary text-base mb-2">Chlorophyll</h3>
+                <div className="text-[13px] text-[#4284FF] font-semibold mb-1">Healthy Lungs</div>
                 <p className="text-xs text-black leading-relaxed">
                   Strengthens the immune system and help block cancer-causing chemicals.
                   Aids in weight loss and lowers cholesterol levels.
@@ -124,6 +126,7 @@ export const BenefitsSection = () => {
               {/* Lycopene */}
               <div className="w-full rounded-md p-4">
                 <h3 className="font-bold text-primary text-base mb-2">Lycopene</h3>
+                <div className="text-[13px] text-[#4284FF] font-semibold mb-1">Healthy Heart</div>
                 <p className="text-xs text-black leading-relaxed">
                   Powerful antioxidant that reduces oxidative damage and inflammation.
                   Protects against various cancers and supports heart health.
@@ -133,6 +136,7 @@ export const BenefitsSection = () => {
               {/* Carotenoids */}
               <div className="w-full rounded-md p-4">
                 <h3 className="font-bold text-primary text-base mb-2">Carotenoids</h3>
+                <div className="text-[13px] text-[#4284FF] font-semibold mb-1">Immunity Booster</div>
                 <p className="text-xs text-black leading-relaxed">
                   Essential for vitamin A production supporting immune health.
                   Reduces inflammation and promotes eye health while aiding hair growth.
@@ -142,6 +146,7 @@ export const BenefitsSection = () => {
               {/* Anthocyanin */}
               <div className="w-full rounded-md p-4">
                 <h3 className="font-bold text-primary text-base mb-2">Anthocyanin</h3>
+                <div className="text-[13px] text-[#4284FF] font-semibold mb-1">Healthy Brains</div>
                 <p className="text-xs text-black leading-relaxed">
                   Lowers blood pressure and reduces the risk of heart disease.
                   Protects brain function and may slow cancer growth.
@@ -233,6 +238,7 @@ export const BenefitsSection = () => {
                 {/* Top Left - Anthoxanthin */}
                 <div className="absolute top-8 left-8 w-80 rounded-md p-5">
                   <h3 className="font-bold text-primary text-lg mb-2">Anthoxanthin</h3>
+                  <div className="text-[15px] text-[#4284FF] font-semibold mb-1">Healthy Bone</div>
                   <p className="text-sm text-black leading-relaxed">
                     Antioxidant properties beneficial for cancer treatment and heart health.
                     Improves blood flow and reduces oxidative stress.
@@ -242,6 +248,7 @@ export const BenefitsSection = () => {
                 {/* Top Right - Chlorophyll */}
                 <div className="absolute top-8 right-8 w-80 rounded-md p-5">
                   <h3 className="font-bold text-primary text-lg mb-2">Chlorophyll</h3>
+                  <div className="text-[15px] text-[#4284FF] font-semibold mb-1">Healthy Lungs</div>
                   <p className="text-sm text-black leading-relaxed">
                     Strengthens the immune system and help block cancer-causing chemicals.
                     Aids in weight loss and lowers cholesterol levels.
@@ -251,6 +258,7 @@ export const BenefitsSection = () => {
                 {/* Bottom Right - Lycopene */}
                 <div className="absolute bottom-8 right-8 w-80 rounded-md p-5">
                   <h3 className="font-bold text-primary text-lg mb-2">Lycopene</h3>
+                  <div className="text-[15px] text-[#4284FF] font-semibold mb-1">Healthy Heart</div>
                   <p className="text-sm text-black leading-relaxed">
                     Powerful antioxidant that reduces oxidative damage and inflammation.
                     Protects against various cancers and supports heart health.
@@ -260,6 +268,7 @@ export const BenefitsSection = () => {
                 {/* Bottom Left - Carotenoids */}
                 <div className="absolute bottom-8 left-8 w-80 rounded-md p-5">
                   <h3 className="font-bold text-primary text-lg mb-2">Carotenoids</h3>
+                  <div className="text-[15px] text-[#4284FF] font-semibold mb-1">Immunity Booster</div>
                   <p className="text-sm text-black leading-relaxed">
                     Essential for vitamin A production supporting immune health.
                     Reduces inflammation and promotes eye health while aiding hair growth.
@@ -269,6 +278,7 @@ export const BenefitsSection = () => {
                 {/* Bottom Center - Anthocyanin */}
                 <div className="absolute -bottom-24 left-1/2 transform -translate-x-1/2 translate-y-24 w-80 rounded-md p-5">
                   <h3 className="font-bold text-primary text-lg mb-2">Anthocyanin</h3>
+                  <div className="text-[15px] text-[#4284FF] font-semibold mb-1">Healthy Brains</div>
                   <p className="text-sm text-black leading-relaxed">
                     Lowers blood pressure and reduces the risk of heart disease.
                     Protects brain function and may slow cancer growth.
