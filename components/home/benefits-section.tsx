@@ -150,7 +150,7 @@ export const BenefitsSection = () => {
             </div>
             {/* Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {benefitsData.map((item, idx) => (
+              {benefitsData.map((item) => (
                 <div key={item.key} className="w-full rounded-md p-4">
                   <h3 className="font-bold text-base mb-2 text-primary bg-clip-text">{item.heading}</h3>
                   <div
