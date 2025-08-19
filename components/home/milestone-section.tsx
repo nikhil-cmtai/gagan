@@ -81,9 +81,8 @@ const MilestoneSection = () => {
                         <div className="w-1/3 invisible"></div>
                         <div className="w-1/3 px-4">
                             <h3 className="text-xl font-bold">
-                                <span className="text-primary">Our </span>
-                                <span className="text-primary">{milestones[1].title} {milestones[1].subtitle}</span>
-                            </h3>
+                                <span className="text-primary">{milestones[3].title}</span>
+                                <span className="text-black"> {milestones[3].subtitle}</span>                            </h3>
                             <div className="mt-2">
                                 {milestones[1].details.map((detail, idx) => (
                                     <p key={idx} className="text-sm md:text-base text-black">{detail}</p>
@@ -151,7 +150,8 @@ const MilestoneSection = () => {
                         <div className="w-1/3 px-4">
                             <h3 className="text-xl font-bold">
                                 <span className="text-primary">Our </span>
-                                <span className="text-primary">{milestones[2].title} {milestones[2].subtitle}</span>
+                                <span className="text-primary">{milestones[2].title}</span>
+                                <span className="text-black"> {milestones[2].subtitle}</span>
                             </h3>
                             <div className="mt-2">
                                 {milestones[2].details.map((detail, idx) => (

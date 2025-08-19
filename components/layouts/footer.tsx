@@ -56,12 +56,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/doctors" className="text-gray-600 hover:text-[#1D22BF] transition-colors">
-                  Meet Our Doctors
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-600 hover:text-[#1D22BF] transition-colors">
+                <Link href="#" className="text-gray-600 hover:text-[#1D22BF] transition-colors">
                   Latest News
                 </Link>
               </li>
@@ -134,7 +129,7 @@ export default function Footer() {
         <div className="border-t pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-sm">
-              © {new Date().getFullYear()} Imperial Water. All rights reserved.
+              © {new Date().getFullYear()} Empire Blue. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <Link href="/privacy-policy" className="text-gray-600 hover:text-[#1D22BF] transition-colors text-sm">

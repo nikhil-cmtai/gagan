@@ -76,7 +76,7 @@ const HeroSection: React.FC = () => {
         {/* Full Width Wave Section - Fixed uniform border */}
         <div className="absolute -bottom-8 left-0 right-0 w-full z-25">
           <svg
-            className="w-full h-[120px] sm:h-[140px]"
+            className="w-full h-[120px] sm:h-[160px]"
             viewBox="0 0 1440 500"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
