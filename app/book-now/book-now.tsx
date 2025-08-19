@@ -262,6 +262,7 @@ export default function BookNow() {
         setErrors({ ...errors, general: adminData.error || userData.error || 'Failed to send booking email.' });
       }
     } catch (err) {
+      console.log("error",err)
       setIsLoading(false);
       setErrors({ ...errors, general: 'Failed to send booking email.' });
     }
