@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
 
       <div className="mx-auto w-full relative z-5">
         {/* Main Card with Stats */}
-        <div className="max-w-6xl mx-auto relative">
+        <div className="max-w-6xl mx-auto relative p-4">
           {/* Main White Card */}
           <div
             className="rounded-[20px] sm:rounded-[40px] relative overflow-hidden z-5 shadow-[2px_3px_40px_8px_rgba(0,84,231,0.18),-1px_-1px_6px_0_rgba(0,84,231,0.06)] mt-1 sm:mt-3 lg:mt-4 ml-0"

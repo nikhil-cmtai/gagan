@@ -8,7 +8,7 @@ const advantages = [
     description: "Our revolutionary water that never expires, ensuring unmatched quality and freshness for decades, making it a unique choice in the modern world today."
   },
   {
-    icon: "/heart1.png",
+    icon: "/heart.png",
     title: "Health benefits",
     description: "Unique water formulation helps prevent major health risks such as cancer and heart attacks while boosting the immune system for long-term vitality and daily wellness."
   },
