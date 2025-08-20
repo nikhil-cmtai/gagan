@@ -17,12 +17,12 @@ export default function InnovationSection() {
             </div>
             
             <h2 className="text-primary text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 sm:mb-8">
-              Revolutionizing
-              <span className="relative mx-2 sm:mx-3">
-                <span className="relative z-10 bg-gradient-to-r from-[#4284FF] to-[#2ECC71] text-transparent bg-clip-text">Water</span>
+              Revolutionizing&nbsp;
+              <span className="relative inline-block mx-2 sm:mx-3">
+                <span className="relative z-10 bg-gradient-to-r from-[#4284FF] to-[#2ECC71] text-transparent bg-clip-text whitespace-nowrap">Water</span>
                 <div className="absolute -bottom-1 sm:-bottom-2 left-0 w-full h-2 sm:h-3 bg-[#4284FF]/10 rounded-full -z-0"></div>
               </span>
-              Technology
+              &nbsp;Technology
             </h2>
             
             <p className="text-gray-600 text-base sm:text-lg mb-8 sm:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">

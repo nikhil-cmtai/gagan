@@ -8,7 +8,7 @@ const milestones = [
         title: "Newtro-X",
         subtitle: "Project Kickoff",
         details: [
-            "Launch of Royal Fresh Minerals, our base segment brand.",
+            "Launch of Newtro-X, our base segment brand.",
             "Introducing the world's first non-expiry water bottle."
         ],
         position: "bottom",
@@ -85,7 +85,7 @@ const MilestoneSection = () => {
                                 <span className="text-black"> {milestones[3].subtitle}</span>                            </h3>
                             <div className="mt-2">
                                 {milestones[1].details.map((detail, idx) => (
-                                    <p key={idx} className="text-sm md:text-base text-black">{detail}</p>
+                                    <p key={idx} className="text-sm text-black md:text-base">{detail}</p>
                                 ))}
                             </div>
                         </div>
@@ -195,7 +195,9 @@ const MilestoneSection = () => {
                                     {milestone.title === "Home Care" || milestone.title === "Vehicle Care" ? (
                                         <>
                                             <span className="text-primary">Our </span>
-                                            <span className="text-primary">{milestone.title} {milestone.subtitle}</span>
+                                            <span className="text-primary">{milestone.title}</span>
+                                            <span className="text-black"> {milestone.subtitle}</span>
+
                                         </>
                                     ) : (
                                         <>

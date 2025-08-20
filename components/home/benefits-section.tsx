@@ -84,7 +84,7 @@ export const BenefitsSection = () => {
 
         {/* Heading and Subheading */}
         <div className="mb-12">
-          <h2 className="text-center text-3xl md:text-5xl font-bold text-primary">
+          <h2 className="text-center text-3xl md:text-5xl font-bold text-primary mt-5">
             <span>Health </span>
             <span className="relative z-10 bg-gradient-to-r from-[#4284FF] to-[#2ECC71] text-transparent bg-clip-text">
               Benefits
