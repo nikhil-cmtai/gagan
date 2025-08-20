@@ -100,18 +100,18 @@ Additional Requirements: ${formData.additionalRequirements}
       const userText = `Dear ${formData.contactPerson || formData.companyName},\nThank you for reaching out to Empire Blue. We have received your request and will get back to you soon.`;
       const userHtml = `<b>Dear ${formData.contactPerson || formData.companyName},</b><br/>Thank you for reaching out to Empire Blue. We have received your request and will get back to you soon.`;
 
-      const adminMail = fetch('/api/send-mail', {
+      const adminMail = fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          to: 'locationtracker21@gmail.com',
+          to: 'admin@empireblue.in',
           subject: adminSubject,
           text: adminText,
           html: adminHtml,
         }),
       });
 
-      const userMail = fetch('/api/send-mail', {
+      const userMail = fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

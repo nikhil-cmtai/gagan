@@ -57,17 +57,17 @@ export default function Contact() {
     setIsSubmitting(true);
     try {
       // Send mail to admin and user
-      const adminMail = fetch('/api/send-mail', {
+      const adminMail = fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          to: 'locationtracker21@gmail.com',
+          to: 'admin@empireblue.in',
           subject: formData.subject,
           text: `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\nMessage: ${formData.message}`,
           html: `<b>Name:</b> ${formData.name}<br/><b>Email:</b> ${formData.email}<br/><b>Phone:</b> ${formData.phone}<br/><b>Subject:</b> ${formData.subject}<br/><b>Message:</b><br/>${formData.message}`,
         }),
       });
-      const userMail = fetch('/api/send-mail', {
+      const userMail = fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

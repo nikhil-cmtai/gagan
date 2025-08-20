@@ -215,7 +215,7 @@ export default function BookNow() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          to: 'locationtracker21@gmail.com',
+          to: 'admin@empireblue.in',
           subject: `New Order Booking from ${formData.firstName} ${formData.lastName}`,
           text: `
             Name: ${formData.firstName} ${formData.lastName}
