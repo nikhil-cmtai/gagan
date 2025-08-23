@@ -156,8 +156,8 @@ export const BenefitsSection = () => {
                   <div
                     className={
                       item.subheadingGradient
-                        ? "text-[13px] bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text font-semibold mb-1"
-                        : "text-[13px] text-[#4284FF] font-semibold mb-1"
+                        ? "text-[13px] bg-gradient-to-r from-blue-700 to-purple-900 text-transparent bg-clip-text font-semibold mb-1"
+                        : "text-[13px] bg-gradient-to-r from-blue-700 to-purple-900 text-transparent bg-clip-text font-semibold mb-1"
                     }
                   >
                     {item.subheading}

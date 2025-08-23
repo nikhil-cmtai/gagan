@@ -13,7 +13,7 @@ export default function InnovationSection() {
           <div className="flex-1 w-full lg:w-auto text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4284FF]/10 to-[#4284FF]/5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full mb-6 sm:mb-8">
               <div className="w-2 h-2 bg-[#4284FF] rounded-full animate-pulse"></div>
-              <span className="text-[#4284FF] text-sm font-medium">Water Innovation</span>
+              <span className="bg-gradient-to-r from-blue-700 to-purple-900 text-transparent bg-clip-text text-sm font-medium">Water Innovation</span>
             </div>
             
             <h2 className="text-primary text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 sm:mb-8">
