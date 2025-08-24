@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const advantages = [
   {
-    icon: "/earth1.png",
+    icon: "/earth.png",
     title: "World's first non-expiry water",
     description: "Our revolutionary water that never expires, ensuring unmatched quality and freshness for decades, making it a unique choice in the modern world today."
   },
