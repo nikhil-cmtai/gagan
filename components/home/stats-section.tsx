@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Users, Star, Package, TrendingUp, Award } from 'lucide-react';
+import { Users, Package, TrendingUp, Award, Truck } from 'lucide-react';
 
 const StatsSection = () => {
   const [counts, setCounts] = useState({
@@ -23,9 +23,9 @@ const StatsSection = () => {
       gradient: "from-blue-500 to-blue-600"
     },
     {
-      icon: Star,
-      label: "Customer Reviews",
-      value: 2500,
+      icon: Truck,
+      label: "Orders Delivered",
+      value: 100000,
       suffix: "+",
       color: "text-yellow-500",
       key: "reviews" as const,

@@ -77,10 +77,12 @@ export default function Header() {
             {/* Mobile Book Now Button */}
             <Link 
               href="/book-now"
-              className="block w-full bg-[#4284FF] text-white px-6 py-3.5 rounded-xl text-center text-lg font-[''] tracking-wide hover:bg-[#2563EB] transition-all duration-300 mt-4"
+              className="block w-full bg-primary text-white px-4 py-2 rounded-xl text-center text-lg font-[''] tracking-wide hover:bg-[#2563EB] transition-all duration-300 mt-4"
             >
-              Book Now
-              <ArrowRightIcon className="w-4 h-4" />
+              <span className="flex items-center justify-center gap-2">
+                Book Now
+                <ArrowRightIcon className="w-4 h-4" />
+              </span>
             </Link>
           </div>
         </div>

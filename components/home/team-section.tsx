@@ -6,7 +6,7 @@ const teamMembers = [
         name: "Dr. Gagan Mahalwanshi",
         position: "Founder & CEO",
         image: "/images/gagan.jpeg",
-        bio: "With over 15 years of experience in the water industry, Dr. Gagan Mahalwanshi has pioneered revolutionary water purification technologies. His vision for Ever Fresh is to create water solutions that are both sustainable and beneficial for health."
+        bio: "With over 15 years of experience in the water industry, Dr. Gagan Mahalwanshi has pioneered revolutionary water purification technologies. His vision for Newtro-X is to create water solutions that are both sustainable and beneficial for health."
     },
     {
         name: "Sandhya Mahalwanshi",

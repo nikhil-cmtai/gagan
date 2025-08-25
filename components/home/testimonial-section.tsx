@@ -11,7 +11,7 @@ const testimonials = [
     location: "Mumbai",
     rating: 5,
     image: "/images/testimonials/priya.jpg",
-    review: "Ever Fresh water has completely transformed my daily routine. The non-expiry feature is a game-changer, and I can taste the difference in purity. My clients love it too!",
+    review: "Newtro-X water has completely transformed my daily routine. The non-expiry feature is a game-changer, and I can taste the difference in purity. My clients love it too!",
     avatar: "PS"
   },
   {
@@ -21,7 +21,7 @@ const testimonials = [
     location: "Delhi",
     rating: 5,
     image: "/images/testimonials/rajesh.jpg",
-    review: "As a restaurant owner, I need reliable water suppliers. Ever Fresh has been exceptional - consistent quality, great pricing, and excellent customer service. Highly recommended!",
+    review: "As a restaurant owner, I need reliable water suppliers. Newtro-X has been exceptional - consistent quality, great pricing, and excellent customer service. Highly recommended!",
     avatar: "RK"
   },
   {
@@ -31,7 +31,7 @@ const testimonials = [
     location: "Bangalore",
     rating: 5,
     image: "/images/testimonials/meera.jpg",
-    review: "I recommend Ever Fresh to all my patients' families. The bacteria-free technology gives me peace of mind, and the health benefits are remarkable. A must-have for every household.",
+    review: "I recommend Newtro-X to all my patients' families. The bacteria-free technology gives me peace of mind, and the health benefits are remarkable. A must-have for every household.",
     avatar: "MP"
   },
   {
@@ -41,7 +41,7 @@ const testimonials = [
     location: "Pune",
     rating: 5,
     image: "/images/testimonials/amit.jpg",
-    review: "Since switching to Ever Fresh, my energy levels have improved significantly. The mineral content is perfect for post-workout hydration. My gym members love it!",
+    review: "Since switching to Newtro-X, my energy levels have improved significantly. The mineral content is perfect for post-workout hydration. My gym members love it!",
     avatar: "AS"
   },
   {
@@ -51,7 +51,7 @@ const testimonials = [
     location: "Hyderabad",
     rating: 5,
     image: "/images/testimonials/kavita.jpg",
-    review: "Pure water is essential for my yoga practice. Ever Fresh delivers exactly what it promises - pure, healthy water that supports my wellness journey. Absolutely love it!",
+    review: "Pure water is essential for my yoga practice. Newtro-X delivers exactly what it promises - pure, healthy water that supports my wellness journey. Absolutely love it!",
     avatar: "KR"
   }
 ];
@@ -84,7 +84,7 @@ const TestimonialSection = () => {
             What Our <span className="relative z-10 bg-gradient-to-r from-[#4284FF] to-[#2ECC71] text-transparent bg-clip-text">Customers</span> Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don&apos;t just take our word for it. Here&apos;s what our valued customers have to say about their experience with Ever Fresh.
+            Don&apos;t just take our word for it. Here&apos;s what our valued customers have to say about their experience with Newtro-X.
           </p>
         </div>
 

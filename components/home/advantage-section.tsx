@@ -15,7 +15,7 @@ const advantages = [
   {
     icon: "/star1.png",
     title: "Premium mineral enrichment",
-    description: "Infused with essential minerals Ever Fresh provides superior nourishment compared to regular bottled water, promoting overall health and energy all day long every day."
+    description: "Infused with essential minerals Newtro-X provides superior nourishment compared to regular bottled water, promoting overall health and energy all day long every day."
   },
   {
     icon: "/right1.png",
