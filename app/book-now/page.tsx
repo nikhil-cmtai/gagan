@@ -1,11 +1,11 @@
-import Login from "./book-now";
+import BookNow from "./book-now";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Login - Empire Blue",
+  title: "Book Now - Empire Blue",
   description: "Access your Empire Blue account to manage your orders and preferences.",
 };
 
-export default function LoginPage() {
-  return <Login />;
+export default function BookNowPage() {
+  return <BookNow />;
 }
