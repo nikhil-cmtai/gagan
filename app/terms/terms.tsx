@@ -209,7 +209,7 @@ export default function Terms() {
                                     </p>
                                     <div className="border-2 border-white rounded-lg p-6">
                                         <div className="space-y-2">
-                                            <p className="text-secondary"><strong>Email:</strong> legal@empireblue.com</p>
+                                            <p className="text-secondary"><strong>Email:</strong> legal@empireblue.in</p>
                                             <p className="text-secondary"><strong>Phone:</strong> +91 98765 43210</p>
                                             <p className="text-secondary"><strong>Address:</strong> Empire Blue Pvt. Ltd., Chhindwara, Madhya Pradesh, India</p>
                                         </div>

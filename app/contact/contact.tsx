@@ -294,8 +294,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-base sm:text-lg font-semibold mb-1">Email Us</h4>
-                    <p className="text-white/80 text-sm sm:text-base">info@empireblue.com</p>
-                    <p className="text-white/80 text-sm sm:text-base">support@empireblue.com</p>
+                    <p className="text-white/80 text-sm sm:text-base">info@empireblue.in</p>
+                    <p className="text-white/80 text-sm sm:text-base">support@empireblue.in</p>
                   </div>
                 </div>
               </div>

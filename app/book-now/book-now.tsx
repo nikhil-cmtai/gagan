@@ -634,7 +634,7 @@ export default function BookNow() {
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">Empire Blue Premium Water</h3>
                   <p className="text-sm text-gray-600">World&apos;s First Non-Expiry Water</p>
-                  <p className="text-sm text-gray-500">1 Unit = 20L</p>
+                  <p className="text-sm text-gray-500">1 Unit = 500ML</p>
                 </div>
               </div>
 
@@ -694,7 +694,7 @@ export default function BookNow() {
               <div className="text-center">
                 <p className="text-sm text-gray-600 mb-2">Need help? Contact us:</p>
                 <p className="text-primary font-medium">+91 8867268719</p>
-                <p className="text-sm text-gray-500">support@empireblue.com</p>
+                <p className="text-sm text-gray-500">support@empireblue.in</p>
               </div>
             </div>
           </div>
