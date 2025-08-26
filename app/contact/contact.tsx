@@ -73,8 +73,8 @@ export default function Contact() {
         body: JSON.stringify({
           to: formData.email,
           subject: 'Thank you for contacting us!',
-          text: `Dear ${formData.name},\nThank you for reaching out to Location Track. We have received your message and will get back to you soon.`,
-          html: `<b>Dear ${formData.name},</b><br/>Thank you for reaching out to Location Track. We have received your message and will get back to you soon.`,
+          text: `Dear ${formData.name},\nThank you for reaching out to Empire Blue. We have received your message and will get back to you soon.`,
+          html: `<b>Dear ${formData.name},</b><br/>Thank you for reaching out to Empire Blue. We have received your message and will get back to you soon.`,
         }),
       });
       const [adminRes, userRes] = await Promise.all([adminMail, userMail]);
