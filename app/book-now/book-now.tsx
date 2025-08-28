@@ -4,6 +4,16 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
+interface OrderItem {
+  variant: string;
+  quantity: number;
+}
+
+interface OrderItem {
+  variant: string;
+  quantity: number;
+}
+
 export default function BookNow() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
@@ -16,12 +26,14 @@ export default function BookNow() {
     city: '',
     state: '',
     zipCode: '',
-    quantity: '1',
     deliveryDate: '',
     deliveryTime: 'morning',
     specialInstructions: '',
     paymentMethod: 'cod'
   });
+  const [orderItems, setOrderItems] = useState<OrderItem[]>([
+    { variant: '500ml', quantity: 1 }
+  ]);
   const [errors, setErrors] = useState({
     firstName: '',
     lastName: '',
@@ -31,26 +43,22 @@ export default function BookNow() {
     city: '',
     state: '',
     zipCode: '',
-    quantity: '',
     deliveryDate: '',
     general: ''
   });
 
+  // Variant pricing configuration
+  const variantPricing = {
+    '250ml': 199,
+    '500ml': 299,
+    '750ml': 399
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    let newValue = value;
-    // For quantity, only allow numbers and prevent leading zeros
-    if (name === 'quantity') {
-      // Remove non-digit characters
-      newValue = newValue.replace(/\D/g, '');
-      // Prevent empty string, default to '1'
-      if (newValue === '') newValue = '1';
-      // Prevent leading zeros
-      newValue = String(Number(newValue));
-    }
     setFormData(prev => ({
       ...prev,
-      [name]: newValue
+      [name]: value
     }));
 
     // Clear errors when typing
@@ -59,6 +67,30 @@ export default function BookNow() {
         ...prev,
         [name]: ''
       }));
+    }
+  };
+
+  const handleOrderItemChange = (index: number, field: keyof OrderItem, value: string | number) => {
+    const newOrderItems = [...orderItems];
+    if (field === 'quantity') {
+      // Remove non-digit characters and prevent leading zeros
+      const cleanValue = String(value).replace(/\D/g, '');
+      const numValue = cleanValue === '' ? 1 : Number(cleanValue);
+      newOrderItems[index][field] = Math.max(1, Math.min(10000, numValue));
+    } else {
+      newOrderItems[index][field] = value as string;
+    }
+    setOrderItems(newOrderItems);
+  };
+
+  const addOrderItem = () => {
+    setOrderItems([...orderItems, { variant: '500ml', quantity: 1 }]);
+  };
+
+  const removeOrderItem = (index: number) => {
+    if (orderItems.length > 1) {
+      const newOrderItems = orderItems.filter((_, i) => i !== index);
+      setOrderItems(newOrderItems);
     }
   };
 
@@ -139,16 +171,16 @@ export default function BookNow() {
       newErrors.zipCode = '';
     }
 
-    // Quantity validation
-    const quantityNum = parseInt(formData.quantity, 10);
-    if (!formData.quantity || isNaN(quantityNum) || quantityNum < 1) {
-      newErrors.quantity = 'Please enter a valid quantity (minimum 1)';
-      valid = false;
-    } else if (quantityNum > 10000) {
-      newErrors.quantity = 'Maximum 10000 units allowed';
+    // Order items validation
+    if (orderItems.length === 0) {
       valid = false;
     } else {
-      newErrors.quantity = '';
+      for (let i = 0; i < orderItems.length; i++) {
+        if (!orderItems[i].variant || orderItems[i].quantity < 1) {
+          valid = false;
+          break;
+        }
+      }
     }
 
     // Delivery Date validation
@@ -180,6 +212,11 @@ export default function BookNow() {
     setIsLoading(true);
     setErrors({ ...errors, general: '' });
 
+    // Create order summary for emails
+    const orderSummary = orderItems.map(item => 
+      `${item.quantity} unit(s) of ${item.variant} - ₹${variantPricing[item.variant as keyof typeof variantPricing] * item.quantity}`
+    ).join('\n');
+
     // Email template for admin
     const adminHtml = `
       <h2>New Order Booking Received</h2>
@@ -187,9 +224,12 @@ export default function BookNow() {
       <p><b>Email:</b> ${formData.email}</p>
       <p><b>Phone:</b> ${formData.phone}</p>
       <p><b>Address:</b> ${formData.address}, ${formData.city}, ${formData.state} - ${formData.zipCode}</p>
-      <p><b>Quantity:</b> ${formData.quantity}</p>
+      <p><b>Order Details:</b></p>
+      <ul>
+        ${orderItems.map(item => `<li>${item.quantity} unit(s) of ${item.variant} - ₹${variantPricing[item.variant as keyof typeof variantPricing] * item.quantity}</li>`).join('')}
+      </ul>
       <p><b>Delivery Date:</b> ${formData.deliveryDate}</p>
-      <p><b>Total Amount:</b> ₹${parseInt(formData.quantity) * 299}</p>
+      <p><b>Total Amount:</b> ₹${calculateTotal()}</p>
       <hr/>
       <p style="color:#0a6cff;font-weight:bold;">Empire Blue - Premium Healthy Water</p>
     `;
@@ -198,11 +238,14 @@ export default function BookNow() {
     const userHtml = `
       <h2>Thank You for Your Booking!</h2>
       <p>Dear ${formData.firstName},</p>
-      <p>We have received your order for <b>${formData.quantity} unit(s)</b> of Empire Blue water.</p>
+      <p>We have received your order for:</p>
+      <ul>
+        ${orderItems.map(item => `<li>${item.quantity} unit(s) of ${item.variant} - ₹${variantPricing[item.variant as keyof typeof variantPricing] * item.quantity}</li>`).join('')}
+      </ul>
       <p>Your order will be delivered to:</p>
       <p>${formData.address}, ${formData.city}, ${formData.state} - ${formData.zipCode}</p>
       <p><b>Expected Delivery Date:</b> ${formData.deliveryDate}</p>
-      <p><b>Total Amount:</b> ₹${parseInt(formData.quantity) * 299}</p>
+      <p><b>Total Amount:</b> ₹${calculateTotal()}</p>
       <br/>
       <p>We will contact you soon for confirmation. For any queries, reply to this email.</p>
       <hr/>
@@ -222,9 +265,10 @@ export default function BookNow() {
             Email: ${formData.email}
             Phone: ${formData.phone}
             Address: ${formData.address}, ${formData.city}, ${formData.state} - ${formData.zipCode}
-            Quantity: ${formData.quantity}
+            Order Details:
+            ${orderSummary}
             Delivery Date: ${formData.deliveryDate}
-            Total Amount: ₹${parseInt(formData.quantity) * 299}
+            Total Amount: ₹${calculateTotal()}
           `,
           html: adminHtml,
         }),
@@ -240,9 +284,10 @@ export default function BookNow() {
           text: `
             Dear ${formData.firstName},
             Thank you for booking your order with Empire Blue.
-            Quantity: ${formData.quantity}
+            Order Details:
+            ${orderSummary}
             Delivery Date: ${formData.deliveryDate}
-            Total Amount: ₹${parseInt(formData.quantity) * 299}
+            Total Amount: ₹${calculateTotal()}
             We will contact you soon for confirmation.
           `,
           html: userHtml,
@@ -269,8 +314,27 @@ export default function BookNow() {
   };
 
   const calculateTotal = () => {
-    const pricePerUnit = 299; // ₹299 per unit
-    return parseInt(formData.quantity) * pricePerUnit;
+    return orderItems.reduce((total, item) => {
+      const pricePerUnit = variantPricing[item.variant as keyof typeof variantPricing];
+      return total + (item.quantity * pricePerUnit);
+    }, 0);
+  };
+
+  const getTotalQuantity = () => {
+    return orderItems.reduce((total, item) => total + item.quantity, 0);
+  };
+
+  const getVariantDescription = (variant: string) => {
+    switch(variant) {
+      case '250ml':
+        return 'Compact size for on-the-go hydration';
+      case '500ml':
+        return 'Perfect balance of convenience and capacity';
+      case '750ml':
+        return 'Large capacity for extended hydration';
+      default:
+        return 'Premium healthy water';
+    }
   };
 
   return (
@@ -477,49 +541,93 @@ export default function BookNow() {
 
                 {/* Order Details */}
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Order Details</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {/* Quantity */}
-                    <div>
-                      <label htmlFor="quantity" className="block text-sm font-medium text-gray-700 mb-1">
-                        Quantity *
-                      </label>
-                      <input
-                        id="quantity"
-                        name="quantity"
-                        type="number"
-                        min={1}
-                        max={10000}
-                        step={1}
-                        value={formData.quantity}
-                        onChange={handleChange}
-                        className={`block w-full px-3 py-3 border ${errors.quantity ? 'border-red-300' : 'border-gray-300'} rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary`}
-                        placeholder="Enter number of units"
-                        inputMode="numeric"
-                        pattern="[0-9]*"
-                      />
-                      {errors.quantity && (
-                        <p className="mt-1 text-sm text-red-600">{errors.quantity}</p>
-                      )}
-                    </div>
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-lg font-semibold text-gray-800">Order Details</h3>
+                    <button
+                      type="button"
+                      onClick={addOrderItem}
+                      className="bg-primary hover:bg-primary-dark text-white px-3 py-2 rounded-lg text-sm transition-colors duration-300"
+                    >
+                      + Add Item
+                    </button>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {orderItems.map((item, index) => (
+                      <div key={index} className="border border-gray-200 rounded-xl p-4 bg-gray-50">
+                        <div className="flex justify-between items-start mb-3">
+                          <p className="font-medium text-gray-800">Item {index + 1}</p>
+                          {orderItems.length > 1 && (
+                            <button
+                              type="button"
+                              onClick={() => removeOrderItem(index)}
+                              className="text-red-500 hover:text-red-700 text-sm"
+                            >
+                              Remove
+                            </button>
+                          )}
+                        </div>
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                          {/* Variant */}
+                          <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                              Water Variant *
+                            </label>
+                            <select
+                              value={item.variant}
+                              onChange={(e) => handleOrderItemChange(index, 'variant', e.target.value)}
+                              className="block w-full px-3 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                            >
+                              <option value="250ml">250ml - ₹199</option>
+                              <option value="500ml">500ml - ₹299</option>
+                              <option value="750ml">750ml - ₹399</option>
+                            </select>
+                          </div>
 
-                    {/* Delivery Date */}
-                    <div>
-                      <label htmlFor="deliveryDate" className="block text-sm font-medium text-gray-700 mb-1">
-                        Delivery Date *
-                      </label>
-                      <input
-                        id="deliveryDate"
-                        name="deliveryDate"
-                        type="date"
-                        value={formData.deliveryDate}
-                        onChange={handleChange}
-                        className={`block w-full px-3 py-3 border ${errors.deliveryDate ? 'border-red-300' : 'border-gray-300'} rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary`}
-                      />
-                      {errors.deliveryDate && (
-                        <p className="mt-1 text-sm text-red-600">{errors.deliveryDate}</p>
-                      )}
-                    </div>
+                          {/* Quantity */}
+                          <div>
+                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                              Quantity *
+                            </label>
+                            <input
+                              type="number"
+                              min={1}
+                              max={10000}
+                              step={1}
+                              value={item.quantity}
+                              onChange={(e) => handleOrderItemChange(index, 'quantity', e.target.value)}
+                              className="block w-full px-3 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                              placeholder="Enter number of units"
+                              inputMode="numeric"
+                              pattern="[0-9]*"
+                            />
+                          </div>
+                        </div>
+                        
+                        <div className="mt-3 text-sm text-gray-600">
+                          <span className="font-medium">Subtotal:</span> ₹{variantPricing[item.variant as keyof typeof variantPricing] * item.quantity}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Delivery Date */}
+                  <div className="mt-6">
+                    <label htmlFor="deliveryDate" className="block text-sm font-medium text-gray-700 mb-1">
+                      Delivery Date *
+                    </label>
+                    <input
+                      id="deliveryDate"
+                      name="deliveryDate"
+                      type="date"
+                      value={formData.deliveryDate}
+                      onChange={handleChange}
+                      className={`block w-full px-3 py-3 border ${errors.deliveryDate ? 'border-red-300' : 'border-gray-300'} rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary`}
+                    />
+                    {errors.deliveryDate && (
+                      <p className="mt-1 text-sm text-red-600">{errors.deliveryDate}</p>
+                    )}
                   </div>
 
                   {/* Delivery Time */}
@@ -633,20 +741,34 @@ export default function BookNow() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">Empire Blue Premium Water</h3>
-                  <p className="text-sm text-gray-600">World&apos;s First Non-Expiry Water</p>
-                  <p className="text-sm text-gray-500">1 Unit = 500ML</p>
+                  <p className="text-sm text-gray-600">Multiple variants available</p>
+                  <p className="text-sm text-gray-500">World&apos;s First Non-Expiry Water</p>
                 </div>
+              </div>
+
+              {/* Order Items */}
+              <div className="space-y-3 mb-6">
+                <h5 className="font-semibold text-gray-800">Order Items:</h5>
+                {orderItems.map((item, index) => (
+                  <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <div>
+                      <span className="font-medium">{item.quantity} × {item.variant}</span>
+                      <p className="text-sm text-gray-500">{getVariantDescription(item.variant)}</p>
+                    </div>
+                    <span className="font-medium">₹{variantPricing[item.variant as keyof typeof variantPricing] * item.quantity}</span>
+                  </div>
+                ))}
               </div>
 
               {/* Order Details */}
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Quantity:</span>
-                  <span className="font-medium">{formData.quantity} Unit{parseInt(formData.quantity) > 1 ? 's' : ''}</span>
+                  <span className="text-gray-600">Total Items:</span>
+                  <span className="font-medium">{getTotalQuantity()} Units</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Price per unit:</span>
-                  <span className="font-medium">₹299</span>
+                  <span className="text-gray-600">Subtotal:</span>
+                  <span className="font-medium">₹{calculateTotal()}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Delivery fee:</span>
